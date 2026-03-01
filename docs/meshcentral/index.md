@@ -7,7 +7,7 @@ This user guide contains all essential information for the user to make full use
 ## 📘 Introduction
 MeshCentral is a free open source web-based remote computer management software. You could setup your own management server on a local network or on the internet and remote control and manage computers that runs either Windows* or Linux\* OS. 
 
-![](images/2022-05-18-22-11-41.jpg)
+![](images/2022-05-18-22-11-41.png)
 
 To begin, a base or management server will be required. A management server could be any computing device (PC or VM) that has sufficient compute, storage and reliable network components to host an environment for MeshCentral and deliver good performance during remote management exercise. Whilst there are many configurations available for advanced users, typical server setup would only take just a few minutes to complete. 
 
@@ -166,7 +166,7 @@ For large scale deployments or setup, a legitimate trusted certificate is highly
 
 It’s important to know the basic file and folder structure from which MeshCentral was installed as shown below
 
-![](images/2022-05-18-22-32-35.jpg)
+![](images/2022-05-18-22-32-35.png)
 
 Right after running the `npm install meshcentral` command, the node_module folder will be created which contains meshcentral and all of its dependent modules. When the server executes for the first time, both meshcentral-data and meshcentral-files folders will be created.
 
@@ -301,7 +301,7 @@ Each domain has sub-settings as follows:
 
 In this mode, the server will serve a different TLS certificate depending on what DNS record is used to access the server.
 
-![](images/2022-05-18-23-33-08.jpg)
+![](images/2022-05-18-23-33-08.png)
 
 As shown in the example above, we have two names that point to the same IP address. Since the configuration specifies the “dns” value, the second domain is only shown when the right name is used. We use “meshcentral” and “devbox” for DNS names, but in practice the user will use fully qualified domain names (FQDN) like “meshcentral.com” or “devbox.meshcentral.com”.
 
@@ -309,14 +309,14 @@ As shown in the example above, we have two names that point to the same IP addre
 
 MeshCentral supports server peering. User could setup up many servers to share the task of handling incoming connections from managed clients and consoles. For server peering to function, all servers must have access to the same database, use the same certificates, the same configuration (with the exception of the server name) and servers must be able to communicate with each other behind a load balancer.
 
-![](images/2022-05-18-23-34-22.jpg)
+![](images/2022-05-18-23-34-22.png)
 
 Hence, the user is expected to have good understanding on networking, server administration and applications to accomplish this setup. This document will not get into the details of setting up a load-balancer. 
 
 !!! Recommended
     Before setting up MeshCentral peering, database migration from NeDB database to MongoDB with replication/sharding option enabled is highly recommend. See: Setting up MeshCentral with MongoDB (section 8.4)
 
-![](images/2022-05-18-23-35-19.jpg)
+![](images/2022-05-18-23-35-19.png)
 
 The setup flow above guides the user to pull together server peering setup with Meshcentral. (2) Shared storage is compulsory to host user files and it must be accessible from all of the servers. If the server is expected for critical work, replicated shared storage should be considered.
 
@@ -348,11 +348,11 @@ We highly recommend the use of an email server (SMTP) because we could allow Mes
 
 A verification email is sent when a new account is created or if the user requests it in the “My Account” tab.
 
-![](images/2022-05-19-00-00-05.jpg)
+![](images/2022-05-19-00-00-05.png)
 
 The password recovery flow when “Reset Account” is triggered at the login page.
 
-![](images/2022-05-19-00-00-18.jpg)
+![](images/2022-05-19-00-00-18.png)
 
 Both account verification and password recovery are triggered automatically once SMTP mail server configuration is included into the config.json file.
 
@@ -512,7 +512,7 @@ MongoDB is useful when setting up MeshCentral for two or more peer servers given
 
 In this guide, we will focus on the 64-bit version of MongoDB (with SSL support!)'s installer. 
 
-![](images/2022-05-18-23-41-58.jpg)
+![](images/2022-05-18-23-41-58.png)
 
 After completing the installation,
 
@@ -526,7 +526,7 @@ This executes the database engine and stores the database data in the default lo
 !!! tip
     We recommend that you use a non-production server to experiment with the options above.
 
-![](images/2022-05-18-23-42-51.jpg)
+![](images/2022-05-18-23-42-51.png)
 
 !!! note
     Upon successful execution, MongoDB will begin to wait for connections on its default port of `27017`.
@@ -583,11 +583,11 @@ mongodb://username:password@127.0.0.1:27017/meshcentral?authMechanism=MONGODB-CR
 
 By default, MeshCentral will read its configuration information from the `meshcentral-data` folder. The most important file in that folder being the `config.json` file, but the folder also contains certificates, branding images, terms of service and more.
 
-![](images/2022-05-18-23-49-37.jpg)
+![](images/2022-05-18-23-49-37.png)
 
 After the configuration is read, MeshCentral will connect to its database and continue to start the server. For most user’s this is a perfectly acceptable way to setup the server. However, in some cases, it’s advantageous to setup the server “state-less”. That is, there is no local configuration files at all and everything is in the database. Two examples of this would be when running MeshCentral is a Docker container where we don’t want the container to have any state or for compliance with security specifications where the database is “encrypted at rest”. In this cases, we will load the configuration files into the database and MeshCentral will only be told how to connect to the database.
 
-![](images/2022-05-18-23-49-53.jpg)
+![](images/2022-05-18-23-49-53.png)
 
 When loading configuration information into the database, MeshCentral requires that a configuration file password be used to encrypt the configuration files in the database. This provides an additional layer of security on top of any authentication and security already provided by the database, if such security has been setup.
 
@@ -651,7 +651,7 @@ A good way for MeshCentral to handle a high traffic is to setup a TLS offload de
 
 As shown in the picture below, TLS traffic will come from the Internet and security will be handled by a device ahead of the server and MeshCentral only has to deal with TCP connections.
 
-![](images/2022-05-18-23-53-04.jpg)
+![](images/2022-05-18-23-53-04.png)
 
 To make this work, it is important the server is setup with `--tlsoffload`. This indicates the server that TLS is already being taken care of and MeshCentral does not have to deal with it. MeshCentral will continue to listen to port 80, 443 and 4433. 
 
@@ -674,7 +674,7 @@ For Intel® AMT MPS port 4433, the certificate files “mpsserver-cert-public.cr
 
 MeshCentral makes use of HTTPS to authenticate and encrypt management traffic over the network. By default, a self-signed certificate is used for the MeshCentral HTTPS server. That certificate is not trusted by browsers and so, you get a warning message when visiting the web site. You can solve this but obtaining a free trusted certificate from [Let's Encrypt](https://letsencrypt.org/). There are some limitations and so, it’s best to get familiar with this service before starting. You will also need a valid domain name that you own and that points to your MeshCentral server.
 
-![](images/2022-05-18-23-55-26.jpg)
+![](images/2022-05-18-23-55-26.png)
 
 Before moving forward with this section, make sure your MeshCentral server is working correctly, has a domain name pointing to it and that the HTTP redirection server on port 80 is enabled and working. MeshCentral’s HTTP port 80 server will be used in the process to prove to Let’s Encrypt that we have control over the domain. At any point, you may try to use [letsdebug.net](https://letsdebug.net/) to see if your domain is setup correctly and/or debug any issues. When ready, add the “letsencrypt” section to the config.json file like this:
 
@@ -702,11 +702,11 @@ Lastly the production key, by default this is false. When set to false, MeshCent
 
 The Let’s Encrypt certificates and files will be created in the “meshcentral-data” folder. Make sure to keep regular backups of the “meshcentral-data” folder and all sub-folders.
 
-![](images/2022-05-18-23-56-29.jpg)
+![](images/2022-05-18-23-56-29.png)
 
 Once you placed the “letsencrypt” section in config.json, restart the server. The request to the Let’s Encrypt server may take a few minutes to a few hours. It’s best to have your DNS server name pointing to your server for over a day before doing this. Once the new certificate is received, the server will automatically restart and browsing to HTTPS on your server will show the new certificate. Here is what it looks like on FireFox:
 
-![](images/2022-05-18-23-56-59.jpg)
+![](images/2022-05-18-23-56-59.png)
 
 If you successfully setup a Let’s Encrypt certificate using the Let’s Encrypt staging server (“production”: false) and everything looks good, stop the server, remove the “letsencrypt” folder in “meshcentral-data”, change production to “true” and start the server again. You should get a real certificate in a few minutes to a few hours. MeshCentral will automatically renew the certificate a few days before it expires. The MeshCentral self-signed certificate will still be present in the “meshcentral-data” folder, this is normal and there is no need to manually copy the Let’s Encrypt certificate to the “meshcentral-data” folder. If something goes wrong with the Let’s Encrypt certificate, the server will fall back to using the self-signed one.
 
@@ -733,7 +733,7 @@ MeshCentral provides IP filtering option in the `config.json` file for each doma
 
 IP addresses are separated by a comma. As a result, only users coming these IP addresses will be able to see the server’s login page as illustrated below. Other IP addresses will be blocked effectively.
 
-![](images/2022-05-18-23-59-28.jpg)
+![](images/2022-05-18-23-59-28.png)
 
 !!! note
     When an IP address whitelist is in effect, MeshAgent's connection from any IP address will be not affected. 
@@ -781,7 +781,7 @@ One interesting way to use MeshCentral is to embed its features into another web
 
 This allows another site to take care of the user accounts and business processes while MeshCentral takes care of remote management. In the example below, a user logs into an existing web site and received a page with MeshCentral remote desktop embedded into it.
 
-![](images/2022-05-19-00-02-03.jpg)
+![](images/2022-05-19-00-02-03.png)
 
 To make this work, a following key alignment is required :
 
@@ -826,7 +826,7 @@ Now, to have this work seamlessly with a different website, we should generate a
 
 The generated masker key must be placed in a secure location within the business website. 
 
-![](images/2022-05-19-00-03-58.jpg)
+![](images/2022-05-19-00-03-58.png)
 
 As illustrated above, we see the business site using the token key to generate a login token and embed it into the response web page. The user’s browser then loads the iframe that includes both the URL with the login token for MeshCentral. MeshCentral can then verify the token and allow the web page to load as expected. 
 
@@ -866,7 +866,7 @@ For example you can run :
 	node meshcentral --redirport 2001 --port 2002 --aliasport 443
 ```
 
-![](images/2022-05-19-00-19-46.jpg)
+![](images/2022-05-19-00-19-46.png)
 
 Here, the server binds the HTTP and HTTPS ports to 2001 and 2002, but the server will externally indicate to MeshAgents and browsers that they must connect to port 443.
 
@@ -878,7 +878,7 @@ In the following picture we have a usual server running with :
 node meshcentral --cert Server1 --port 443 --mpsport 4433
 ```
 
-![](images/2022-05-19-00-21-19.jpg)
+![](images/2022-05-19-00-21-19.png)
 
 We can setup the server so that MeshAgent and Intel AMT will connect on port 443 of two different IP address or names like this:
 
@@ -886,7 +886,7 @@ We can setup the server so that MeshAgent and Intel AMT will connect on port 443
 node meshcentral --cert Server1 --mpscert Server2 --port 443 --mpsport 4433 --mpsaliasport 443
 ```
 
-![](images/2022-05-19-00-21-54.jpg)
+![](images/2022-05-19-00-21-54.png)
 
 In the second example, the server on the right is running HTTPS on port 443 and MPS on port 4433 as usual, but the MPS is now presenting a certificate that has the name `Server2` on it. The server will also configure Intel AMT CIRA to connect to `Server2:443`.
 
@@ -955,7 +955,7 @@ In addition to local device groups, the IP-KVM/Power switch device group was als
 
 Sometimes it’s useful to setup MeshCentral with a reverse-proxy in front of it. This is useful if you need to host many services on a single public IP address, if you want to offload TLS and perform extra web caching. In this section we will setup NGINX, a popular reverse-proxy, in front of MeshCentral. NGNIX is available at: [Nginx](https://www.nginx.com/)
 
-![](images/2022-05-19-00-23-11.jpg)
+![](images/2022-05-19-00-23-11.png)
 
 In this example, we will :
 
@@ -1078,7 +1078,7 @@ Notice on the second line, MeshCentral will have loaded the web certificate from
 
 We can add on the section above and support reverse proxy for Intel® AMT Client Initiated more Access (CIRA) connecting that come to the server. Normally, CIRA connections come on port 4433 and use TLS.
 
-![](images/2022-05-19-00-25-11.jpg)
+![](images/2022-05-19-00-25-11.png)
 
 Since CIRA is a binary protocol, care must be taken to configure NGINX to handle the data as a TCP stream instead of HTTP. At the very bottom of the nginx.conf file, we can add the following:
 
@@ -1136,7 +1136,7 @@ In this section, we will setup MeshCentral with Traefik, a popular reverse proxy
 
 This section covers a really simple Traefik configuration. Traefik is capable of a lot more complex configurations.
 
-![](images/2022-05-19-00-32-32.jpg)
+![](images/2022-05-19-00-32-32.png)
 
 In this example, we will:
 
@@ -1227,11 +1227,11 @@ Finally, the API section creates a web portal on port 8080 for monitoring of Tra
 
 In this section, we will setup MeshCentral with HAProxy, a small popular reverse proxy software. This section will be much like the previous sections setting up NGNIX and Traefik but with a different software and configuration file. HAProxy is free and available at: [HAProxy Official Website](https://www.haproxy.org/)
 
-![](images/2022-05-19-00-34-54.jpg)
+![](images/2022-05-19-00-34-54.png)
 
 This section covers a really simple configuration. HAProxy is capable of a lot more complex configurations. In the following example, HAProxy will perform TLS and forward the un-encrypted traffic to MeshCentral on port 444. HAProxy will add extra “X-Forwarded-Host” headers to the HTTP headers so that MeshCentral will know from the IP address the connection comes from.
 
-![](images/2022-05-19-00-35-32.jpg)
+![](images/2022-05-19-00-35-32.png)
 
 In the following configuration file, we have browser connections on port 80 being redirected to HTTPS port 443. We also have Let’s Encrypt cert bot for getting a real TLS certificate and “mesh.sample.com” being redirected to 127.0.0.1:444.
 
@@ -1330,7 +1330,7 @@ If the MeshCentral server is setup with a certificate name and not setup to use 
 
 To get this features setup, users will need to go to the “My Account” tab or the “My Account” menu in the mobile application. They then select, “Add 2-stop login” and follow the instructions.
 
-![](images/2022-05-19-00-38-11.jpg)
+![](images/2022-05-19-00-38-11.png)
 
 Note that if a user performs a password recovery using email, the 2-step authentication is then turned off and will need to be turned on again. This is not idea as someone being able to intercept the user’s email could still log into the web site. Users should make sure to properly protect their email account.
 
@@ -1485,11 +1485,11 @@ node node_modules/meshcentral --vaultdeleteconfigfiles --vault http://127.0.0.1:
 
 Regardless if using the default NeDB database or MongoDB, MeshCentral can optionally encrypt sensitive data that is stored in the database. When enabled, this encryption is applied to user credentials and Intel AMT credentials.
 
-![](images/2022-05-19-00-44-03.jpg)
+![](images/2022-05-19-00-44-03.png)
 
 The additional encryption does the affect database operations and can be used in addition to additional database security. In the following image, we see on the left a normal user record including user credential hashes and data required for two-factor authentication. On the right side, these values are encrypted using AES-256-GCM in the `_CRYPT` field.
 
-![](images/2022-05-19-00-44-25.jpg)
+![](images/2022-05-19-00-44-25.png)
 
 Only some data fields are encrypted and the “_CRYPT” entry will only be present when one or more fields are present that need to be secured. To enable this feature, add the “DbRecordsEncryptKey” with a password string to the “settings” section of the config.json like this:
 
