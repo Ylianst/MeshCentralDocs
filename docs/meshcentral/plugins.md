@@ -20,7 +20,7 @@ Certain feature requests may not be suitable for all MeshCentral users and thus 
 2. Restart MeshCentral if you needed to change the configuration.
 2. Log into MeshCentral as full administrator.
 3. Go my `My Server` -> `Plugins`, then hit the Download plugin button.
-4. A dialog opens requesting a URL, e.g. put in: <https://github.com/ryanblenis/MeshCentral-ScriptTask>
+4. A dialog opens requesting a URL, e.g. put in: <https://raw.githubusercontent.com/ryanblenis/MeshCentral-ScriptTask/master/config.json>
 5. The plugin pops up in the plugin list below the download button, you can now configure and enable/disable it.
 
 # Plugins - Development & Hooks
@@ -117,6 +117,91 @@ Any function can be exported to the Web UI layer by adding the name of the funct
 ### Mesh Agent
 
 Use of the optional file `plugin_name.js` in the optional folder `modules_meshcore` will include the file in the default meshcore file sent to each endpoint. This is useful to add functionality on each of the endpoints.
+
+### Plugin Permissions
+
+Plugins can define custom permissions that administrators can manage through MeshCentral's permissions dialog. This allows fine-grained access control at three levels: Global, Mesh (Device Group), and Node (Device).
+
+#### Registering Permissions
+
+Use `registerPermissions` to define what permissions your plugin supports:
+
+```javascript
+parent.registerPermissions('plugin_name', {
+    'can_access': { 
+        title: 'Access Plugin', 
+        desc: 'Can access the plugin functionality', 
+        default: 'allowed' 
+    },
+    'can_edit': { 
+        title: 'Edit', 
+        desc: 'Can edit values', 
+        default: 'allowed' 
+    },
+    'can_delete': { 
+        title: 'Delete', 
+        desc: 'Can delete values', 
+        default: 'denied' 
+    }
+});
+```
+
+Each permission has:
+- **key**: Unique identifier for the permission (e.g., `can_access`, `can_edit`)
+- **title**: Human-readable name shown in the UI
+- **desc**: Description shown in the UI
+- **default**: Default state when no explicit permission is set
+
+#### Default Value States
+
+The `default` field controls what happens when no explicit permission is set. Valid values are:
+
+| Value | Description |
+|-------|-------------|
+| `allowed` | Users have permission by default |
+| `denied` | Users are denied by default |
+
+#### Permission Cascade
+
+Permissions follow a hierarchy where lower levels inherit from higher ones:
+
+1. **Global** - Applied to all users across all meshes and nodes
+2. **Mesh (Device Group)** - Applied to users within a specific mesh
+3. **Node (Device)** - Applied to users on a specific node
+
+When a permission is set to `inherited` or is not configured, the system looks up the hierarchy:
+- Node → Mesh → Global → Default (from permission definition)
+
+#### Checking Permissions
+
+Use `getAccessPermissions` to check if a user has a specific permission. This is function async and returns a function that can be called to check individual permissions:
+
+```javascript
+    // Check permissions - pass nodeid to resolve mesh automatically
+    var hasAccess = await obj.getAccessPermissions(userObj, nodeId);
+    
+    // Check specific permission
+    if (!hasAccess('can_access')) {
+        // Return error response (see Error Handling below)
+        return;
+    }
+    
+    // Continue with action...
+```
+
+The `getAccessPermissions` function:
+- Accepts `user` object and a `context` object or string of the nodeId
+- Context can include:
+  - `nodeid`: Node ID to check (mesh will be resolved automatically)
+  - `meshid`: Mesh ID to check directly
+- Returns a function that takes a permission key and returns `true`/`false`
+
+#### Complete Example
+
+See the [MeshCentral-RegEdit](https://github.com/ryanblenis/MeshCentral-RegEdit) plugin for a complete working example that implements:
+- Permission registration with multiple permission levels
+- Async permission checking in `serveraction`
+- Detailed error messages for permission denied scenarios
 
 ## Structure
 
