@@ -43,3 +43,60 @@ If you would like to download folders via Files simply select folder/files then 
 If you would like to share device groups with different AD users.
 
 In the config.json set "ldapuserkey" to "sAMAccountName".
+
+## Docker Password Resets (If Locked Out from the Web GUI)
+
+If you lose access to your MeshCentral instance due to a locked or forgotten admin account but still have shell access to your Docker containers, you can safely reset the credentials. This is performed while the containers are running dont shut the containers down!
+
+### Steps
+
+**1. Access the MeshCentral container shell**
+
+Open a shell session inside your MeshCentral container.
+
+**2. Navigate to the MeshCentral directory**
+
+```bash
+cd /opt/meshcentral
+```
+
+> ⚠️ **Note:** The path is case-sensitive YOURS MIGHT BE DIFFERENT!
+
+**3. (Optional) View available CLI commands**
+
+```bash
+node meshcentral --help
+```
+
+**4. Reset the account credentials**
+
+```bash
+node meshcentral --resetaccount 'email//user' --pass 'newtemporarypassword'
+```
+
+Replace `email//user` with either:
+- The user's **email address** (if that is their login identifier), or
+- The user's **userID** (if they do not log in with an email)
+
+Also ensure the new password complies with any password complexity rules defined in your `config.json`.
+
+**5. Verify the output**
+
+- ✅ A `done` response indicates success.
+- ❌ An error response will help narrow down the issue (wrong username format, password policy violation, etc.).
+
+**6. Restart the containers**
+
+Restart the MeshCentral container and, if applicable, its associated database container, or stack if you have stacks in a tool:
+
+```bash
+docker restart <meshcentral-container-name>
+docker restart <database-container-name>
+```
+
+---
+
+### ⚠️ Security Considerations
+
+- This process **will reset 2FA** for the affected account.
+- Because this operation requires direct container access, **restrict shell/container access as much as possible** to limit exposure.
