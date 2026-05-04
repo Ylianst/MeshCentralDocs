@@ -2023,7 +2023,7 @@
 <li>Restart MeshCentral if you needed to change the configuration.</li>
 <li>Log into MeshCentral as full administrator.</li>
 <li>Go my <code>My Server</code> -&gt; <code>Plugins</code>, then hit the Download plugin button.</li>
-<li>A dialog opens requesting a URL, e.g. put in: <a href="https://github.com/ryanblenis/MeshCentral-ScriptTask">https://github.com/ryanblenis/MeshCentral-ScriptTask</a></li>
+<li>A dialog opens requesting a URL, e.g. put in: <a href="https://raw.githubusercontent.com/ryanblenis/MeshCentral-ScriptTask/master/config.json">https://raw.githubusercontent.com/ryanblenis/MeshCentral-ScriptTask/master/config.json</a></li>
 <li>The plugin pops up in the plugin list below the download button, you can now configure and enable/disable it.</li>
 </ol>
 <h1 id="plugins-development-hooks">Plugins - Development &amp; Hooks</h1>
@@ -2193,6 +2193,86 @@
 </ul>
 <h3 id="mesh-agent">Mesh Agent</h3>
 <p>Use of the optional file <code>plugin_name.js</code> in the optional folder <code>modules_meshcore</code> will include the file in the default meshcore file sent to each endpoint. This is useful to add functionality on each of the endpoints.</p>
+<h3 id="plugin-permissions">Plugin Permissions</h3>
+<p>Plugins can define custom permissions that administrators can manage through MeshCentral's permissions dialog. This allows fine-grained access control at three levels: Global, Mesh (Device Group), and Node (Device).</p>
+<h4 id="registering-permissions">Registering Permissions</h4>
+<p>Use <code>registerPermissions</code> to define what permissions your plugin supports:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">parent</span><span class="p">.</span><span class="nx">registerPermissions</span><span class="p">(</span><span class="s1">&#39;plugin_name&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s1">&#39;can_access&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">        </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Access Plugin&#39;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="nx">desc</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Can access the plugin functionality&#39;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;allowed&#39;</span><span class="w"> </span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="s1">&#39;can_edit&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">        </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Edit&#39;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="nx">desc</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Can edit values&#39;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;allowed&#39;</span><span class="w"> </span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="s1">&#39;can_delete&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">        </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Delete&#39;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="nx">desc</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Can delete values&#39;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;denied&#39;</span><span class="w"> </span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Each permission has:
+- <strong>key</strong>: Unique identifier for the permission (e.g., <code>can_access</code>, <code>can_edit</code>)
+- <strong>title</strong>: Human-readable name shown in the UI
+- <strong>desc</strong>: Description shown in the UI
+- <strong>default</strong>: Default state when no explicit permission is set</p>
+<h4 id="default-value-states">Default Value States</h4>
+<p>The <code>default</code> field controls what happens when no explicit permission is set. Valid values are:</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>allowed</code></td>
+<td>Users have permission by default</td>
+</tr>
+<tr>
+<td><code>denied</code></td>
+<td>Users are denied by default</td>
+</tr>
+</tbody>
+</table>
+<h4 id="permission-cascade">Permission Cascade</h4>
+<p>Permissions follow a hierarchy where lower levels inherit from higher ones:</p>
+<ol>
+<li><strong>Global</strong> - Applied to all users across all meshes and nodes</li>
+<li><strong>Mesh (Device Group)</strong> - Applied to users within a specific mesh</li>
+<li><strong>Node (Device)</strong> - Applied to users on a specific node</li>
+</ol>
+<p>When a permission is set to <code>inherited</code> or is not configured, the system looks up the hierarchy:
+- Node → Mesh → Global → Default (from permission definition)</p>
+<h4 id="checking-permissions">Checking Permissions</h4>
+<p>Use <code>getAccessPermissions</code> to check if a user has a specific permission. This is function async and returns a function that can be called to check individual permissions:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">// Check permissions - pass nodeid to resolve mesh automatically</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">hasAccess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">obj</span><span class="p">.</span><span class="nx">getAccessPermissions</span><span class="p">(</span><span class="nx">userObj</span><span class="p">,</span><span class="w"> </span><span class="nx">nodeId</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Check specific permission</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">hasAccess</span><span class="p">(</span><span class="s1">&#39;can_access&#39;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Return error response (see Error Handling below)</span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Continue with action...</span>
+</code></pre></div>
+<p>The <code>getAccessPermissions</code> function:
+- Accepts <code>user</code> object and a <code>context</code> object or string of the nodeId
+- Context can include:
+  - <code>nodeid</code>: Node ID to check (mesh will be resolved automatically)
+  - <code>meshid</code>: Mesh ID to check directly
+- Returns a function that takes a permission key and returns <code>true</code>/<code>false</code></p>
+<h4 id="complete-example">Complete Example</h4>
+<p>See the <a href="https://github.com/ryanblenis/MeshCentral-RegEdit">MeshCentral-RegEdit</a> plugin for a complete working example that implements:
+- Permission registration with multiple permission levels
+- Async permission checking in <code>serveraction</code>
+- Detailed error messages for permission denied scenarios</p>
 <h2 id="structure">Structure</h2>
 <p>Much of MeshCentral revolves around returning objects for your structures, and plugins are no different. Within your plugin you can traverse all the way up to the web server and MeshCentral Server classes to access all the functionality those layers provide. This is done by passing the current object to newly created objects, and assigning that reference to a <code>parent</code> variable within that object.</p>
 <h2 id="ping-pong">Ping-Pong</h2>
