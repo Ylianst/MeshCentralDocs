@@ -142,7 +142,7 @@ f3bd69a08a2dde4a3423bec8f20d8626b1e6365381f2d9919e7dfe256ace9cbbdea66bed2bdcd00b
 The hex value presented here is a sensitive secret that allows anyone to create login tokens that can be used for user impersonation. This key is used when MeshCentral does server peering and load balancing for example. You should save this key in a file, for example “key.txt”, you can do it like this: 
 
 ```
-node ./node_modules/meshcentral –logintokenkey > key.txt
+node ./node_modules/meshcentral –-logintokenkey > key.txt
 ```
 
 Now that you have the server key, you can use MeshCtrl like this: 
