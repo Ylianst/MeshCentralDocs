@@ -4,7 +4,7 @@
 
 For Microsoft Windows users, the easiest way to install MeshCentral is by using the dedicated installer tool. This tool automates the setup, including checking for and installing **Node.js** if necessary.
 
-You can download the MeshCentral installer from the official website or by clicking [this link](https://www.meshcommander.com/meshcentral2).
+You can download the MeshCentral installer from the official website or by clicking [this link](https://meshcentral.com/tools/MeshCentralInstaller.exe).
 
 > **Recommendation:** We advise running the installer on a modern version of Windows (e.g., Windows 8.1, Windows 10, or Windows Server 2012 or newer).
 
