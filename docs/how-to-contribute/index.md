@@ -15,7 +15,7 @@ If you're looking to contribute beyond translations, such as updating documentat
 
     > - In your forked repository, create a new branch to keep your changes organized. This helps in managing different contributions separately.
 
-    > - Make the necessary changes in your repository. This could involve updating documentation files or modifying code to add new features or fix bugs.
+    > - Make the necessary changes in your repository.
 
 3. **Review Your Changes :**
 
@@ -37,8 +37,6 @@ If you're looking to contribute beyond translations, such as updating documentat
 7. **Final Steps :**
 
     > Once your pull request is approved and merged by a maintainer, your contributions will be incorporated into the MeshCentral project. Congratulations, and thank you for helping improve MeshCentral!
-
----
 
 ## 🗣️ Contribute to MeshCentral's Multilingual Support
 
@@ -97,3 +95,37 @@ To make MeshCentral multilingual, your contributions are crucial. Follow these s
     If you make any changes to `default.handlebars`, run the translate server to propagate these modifications to the language-specific handlebar files located in `node_modules/meshcentral/views/translations`.
 
 By following these steps, you help MeshCentral support any language you choose, making it more accessible worldwide. By sharing your translations with us, you also help make these languages available to other users, improving the community and extending the software's reach.
+
+---
+
+## 📝 Contributing to This Documentation Site
+
+If you spot a typo, want to clarify an existing page, or want to add a new article to this documentation site, contribute in the documentation repository instead of the main application repository.
+
+1. **Fork the Documentation Repository :**
+
+    > Start by forking [MeshCentralDocs](https://github.com/Ylianst/MeshCentralDocs) on GitHub.
+
+    > This repository contains the Markdown source for the documentation site.
+
+2. **Create a Branch :**
+
+    > Create a branch in your fork for your documentation changes so your work stays isolated and easy to review.
+
+3. **Edit the Documentation :**
+
+    > Make your updates in the `docs/` folder, and update navigation or supporting files such as `mkdocs.yml` if your changes require it.
+
+4. **Preview Your Changes :**
+
+    > Run the local docs site if possible so you can verify formatting, links, images, and navigation before submitting your changes.
+
+5. **Submit a Pull Request :**
+
+    > Open a pull request from your branch to the `main` branch of the `MeshCentralDocs` repository.
+
+    > Include a clear summary of what was changed and why.
+
+6. **Respond to Review Feedback :**
+
+    > If maintainers request revisions, update your branch and push the additional commits to the same pull request.

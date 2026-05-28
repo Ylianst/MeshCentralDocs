@@ -100,7 +100,7 @@ Debug more will cause MeshCentral to output a lot of debug messages to the conso
 node node_modules/meshcentral --debug
 ```
 
-A more practical way to run the debug command it to specify what messages you want printed out using a comma seperated list, for example:
+A more practical way to run the debug command it to specify what messages you want printed out using a comma separated list, for example:
 
 ```bash
 node node_modules/meshcentral --debug web,amt,mps

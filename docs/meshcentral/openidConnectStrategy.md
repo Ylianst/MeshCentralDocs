@@ -6,11 +6,11 @@
 
 There is a lot of information to go over, but first, why OpenID Connect?
 
-Esentially its because its both based on a industry standard authorization protocol, and is becoming an industry standard authentication protocol. Put simply it's reliable and reusable, and we use OpenID Connect for exactly those reasons, almost every everyone does, and we want to be able to integrate with almost anyone. This strategy allows us to expand the potential of MeshCentral through the potential of OpenID Connect.
+Essentially, OpenID Connect is appealing because it is based on an industry-standard authorization protocol and is itself becoming an industry-standard authentication protocol. Put simply, it is reliable, reusable, and widely supported. We use OpenID Connect for exactly those reasons, and it allows MeshCentral to integrate with a wide range of identity providers.
 
 In this document, we will learn about the OpenID Connect specification at a high level, and then use that information to configure the OpenID Connect strategy for MeshCentral using a generic OpenID Connect compatible IdP. After that we will go over some advanced configurations and then continue by explaining how to use the new presets for popular IdPs, specifically Google or Azure. Then we will explore the configuration and usage of the groups feature.
 
-> ATTENTION: As of MeshCentral `v1.1.22` there are multiple config options being depreciated. Using any of the old configs will only generate a warning in the authlog and will not stop you from using this strategy at this time. If there is information found in both the new and old config locations the new config location will be used. We will go over the specifics later, now lets jump in.
+> ATTENTION: As of MeshCentral `v1.1.22` there are multiple config options being deprecated. Using any of the old configs will generate a warning in the authlog but will not stop you from using them at this time. If there is information found in both the new and old config locations the new config location will be used. We will go over the specifics later, now let's jump in.
 
 ### Chart of Frequently Used Terms and Acronyms
 | Term | AKA | Descriptions |
@@ -83,9 +83,9 @@ Generally, if you are using an IdP that supports OIDC, you can use a very basic 
 
 As you can see, this is roughly the same as all the other OAuth2 based authentication strategies. These are the basics you need to get started, however, if you plan to take advantage of some of the more advanced features provided by this strategy, you'll need to keep reading.
 
-In this most basic of setups, you only need the URL of the issuer, as well as a client ID and a client secret. Notice in this example that the callback URL (or client redirect uri) is not configured, thats because MeshCentral will use `https://mesh.your.domain/auth-oidc-callback` as the default. Once you've got your configuration saved, restart MeshCentral and you should see an OpenID Connect Single Sign-on button on the login screen.
+In this most basic of setups, you only need the URL of the issuer, as well as a client ID and a client secret. Notice in this example that the callback URL (or client redirect uri) is not configured, that's because MeshCentral will use `https://mesh.your.domain/auth-oidc-callback` as the default. Once you've got your configuration saved, restart MeshCentral and you should see an OpenID Connect Single Sign-on button on the login screen.
 
-> WARNING: The redirect endpoint must EXACTLY match the value provided to your IdP or your will deny the connection.
+> WARNING: The redirect endpoint must EXACTLY match the value provided to your IdP or your server will deny the connection.
 
 > ATTENTION: You are required to configure the cert property in the settings section for the default domain, and configure the dns property under each additional domain.
 
@@ -93,7 +93,7 @@ In this most basic of setups, you only need the URL of the issuer, as well as a 
 
 ### Overview
 
-There are plenty of options at your disposal if you need them. In fact, you can configure any property that node-openid-client supports. The openid-client module supports far more customization than I know what to do with, if you want to know more check out [node-openid-client on GitHub](https://github.com/panva/node-openid-client) for expert level configuration details. There are plenty of things you can configure with this strategy and there is a lot of decumentation behind the tools used to make this all happen. I strongly recommend you explore the [config schema](https://github.com/Ylianst/MeshCentral/blob/master/meshcentral-config-schema.json), and if you have a complicated config maybe check out the [openid-client readme](https://github.com/panva/node-openid-client/blob/main/docs/README.md). Theres a list of resources at the end if you want more information on any specific topics. In the meantime, let’s take a look at an example of what your config file could look with a slightly more complicated configuration, including multiple manually defined endpoints.
+There are plenty of options at your disposal if you need them. In fact, you can configure any property that node-openid-client supports. The openid-client module supports far more customization than I know what to do with, if you want to know more check out [node-openid-client on GitHub](https://github.com/panva/node-openid-client) for expert level configuration details. There are plenty of things you can configure with this strategy and there is a lot of documentation behind the tools used to make this all happen. I strongly recommend you explore the [config schema](https://github.com/Ylianst/MeshCentral/blob/master/meshcentral-config-schema.json), and if you have a complicated config maybe check out the [openid-client readme](https://github.com/panva/node-openid-client/blob/main/docs/README.md). There's a list of resources at the end if you want more information on any specific topics. In the meantime, let’s take a look at an example of what your config file could look with a slightly more complicated configuration, including multiple manually defined endpoints.
 
 #### *Advanced Config File Example*
 
@@ -262,7 +262,7 @@ There are just about as many option as possible here since openid-client also pr
 
 #### *Required and Commonly Used Configs*
 
-There are many available options you can configure but most of them go unused. Although there are a few *commonly used* properties. The first two properties, `client_id` and `client_secret` are required. The next one `redirect_uri` is used to setup a custom URI for the redirect back to MeshCentral after being authenicated by your IdP.  The `post_logout_redirect_uri` property is used to tell your IdP where to send you after being logged out. These work in conjunction with the issuers `end_session_url` to automatically fill in any blanks in the config.
+There are many available options you can configure but most of them go unused. Although there are a few *commonly used* properties. The first two properties, `client_id` and `client_secret` are required. The next one `redirect_uri` is used to setup a custom URI for the redirect back to MeshCentral after being authenticated by your IdP.  The `post_logout_redirect_uri` property is used to tell your IdP where to send you after being logged out. These work in conjunction with the issuers `end_session_url` to automatically fill in any blanks in the config.
 
 #### *Schema*
 ``` json
@@ -363,7 +363,7 @@ These are all the options that dont fit with the issuer or client, including the
 
 #### *Required and Commonly Used Configs*
 
-As should be apparent by the name alone, the custom property does not need to be configured and is used for optional or advanced configurations. With that said, lets look at few common options  strategy will default to using the `openid`, `profile`, and `email` scopes to gather the required information about the user, if your IdP doesn't support or require all these, you can set up the scope manually. Combine that with the ability to set the group scope and you can end up with an entirely custom scope being sent to your IdP. Not to mention the claims property, which allows you to pick and choose what claims to use to gather your data in case you have issues with any of the default behaviors of OpenID Connect and your IdP. This is also where you would set the preset and any values required by the presets.
+As should be apparent from the name, the `custom` property is optional and intended for advanced configurations. With that said, let's look at a few common options. By default, the strategy uses the `openid`, `profile`, and `email` scopes to gather the required user information. If your IdP does not support or require all of those scopes, you can define the scope manually. Combine that with the ability to set the group scope and you can end up with an entirely custom scope being sent to your IdP. Not to mention the claims property, which allows you to pick and choose what claims to use to gather your data in case you have issues with any of the default behaviors of OpenID Connect and your IdP. This is also where you would set the preset and any values required by the presets.
 
 #### *Schema*
 ``` json
@@ -453,7 +453,7 @@ The OIDC login button icon can be customized by setting a remote image URL in th
 
 #### *Introduction*
 
-The groups option allows you to use the groups you already have with your IdP in MeshCentral in a few ways. First you can set a group that the authorized user must be in to sign in to MeshCentral. You can also allow users with the right memberships automatic admin privlidges, and there is even an option to revoke privlidges if the user is NOT in the admin group. Besides these filters, you can filter the sync property to mirror only certain groups as MeshCentral User Groups, dynamically created as the user logs in. You can of course simply enable sync and mirror all groups from your IdP as User Groups. Additionally you can define the scope and claim of the groups for a custom setup, again allowing for a wide range of IdPs to be used, even without a preset.
+The groups option allows you to use the groups you already have with your IdP in MeshCentral in a few ways. First you can set a group that the authorized user must be in to sign in to MeshCentral. You can also allow users with the right memberships automatic admin priviledges, and there is even an option to revoke priviledges if the user is NOT in the admin group. Besides these filters, you can filter the sync property to mirror only certain groups as MeshCentral User Groups, dynamically created as the user logs in. You can of course simply enable sync and mirror all groups from your IdP as User Groups. Additionally you can define the scope and claim of the groups for a custom setup, again allowing for a wide range of IdPs to be used, even without a preset.
 
 #### *Common Config Chart*
 
@@ -664,17 +664,17 @@ As with all other types of configuration for the OIDC strategy, the Azure preset
 },
 ```
 
-## Depreciated Properties
+## Deprecated Properties
 
 ### Overview
 
 #### Introduction
 
-As of MeshCentral `v1.1.22` and the writing of this documentation, the node module that handles everything was changed from [passport-openid-connect](https://github.com/jaredhanson/passport-openidconnect) to [openid-client](https://github.com/panva/node-openid-client). As a result of this change, multiple properties in the config have been depcrecated; this means some options in the strategy arent being used anymore. These are often referred to as "old configs" by this documentation. 
+As of MeshCentral `v1.1.22` and the writing of this documentation, the node module that handles everything was changed from [passport-openid-connect](https://github.com/jaredhanson/passport-openidconnect) to [openid-client](https://github.com/panva/node-openid-client). As a result of this change, multiple properties in the config have been deprecated; this means some options in the strategy aren't being used anymore. These are often referred to as "old configs" by this documentation. 
 
 #### *Migrating Old Configs*
 
-We upgraded but what about all the existing users, we couldn't just invalidate every config pre `v1.1.22`. So in an effort to allow greater flexibility to all users of MeshCentral, and what futures scholars will all agree was an obvious move, all the depreciated configs will continue working as expected. Using any of the old options will just generate a warning in the authlog and will not stop you from using this the OIDC strategy with outdated configs, however if both the equivalent new and old config are set the new config will be used.
+We upgraded but what about all the existing users, we couldn't just invalidate every config pre `v1.1.22`. So in an effort to allow greater flexibility to all users of MeshCentral, and what futures scholars will all agree was an obvious move, all the deprecated configs will continue working as expected. Using any of the old options will just generate a warning in the authlog and will not stop you from using this the OIDC strategy with outdated configs, however if both the equivalent new and old config are set the new config will be used.
 
 #### *Old Config Example*
 ```json
@@ -684,8 +684,7 @@ We upgraded but what about all the existing users, we couldn't just invalidate e
     "clientsecret": "GNLXOL-kEDjufOCk6pIcTHtaHFOCgbT4hoi"
 }
 ```
-
-This example was chosen because I wanted to highlight an advantage of supporting these old configs long term, even in a depreciated status. That is, the ability to copy your existing config from one of the related strategies without making any changes to your config by using the presets. This allows you to test out the oidc strategy without commiting to anything, since the user is always appended with the strategy used to login. In this example, the config was originally a google auth strategy config, changing the `"google"` to `"oidc"` is all that was done to the above config, besides obsfuscation of course.
+This example was chosen to highlight one advantage of supporting these older configs while they remain deprecated: you can copy an existing configuration from a related strategy and test the OIDC strategy without restructuring your config first. In this example, the original configuration was a Google auth strategy, and the only change made was replacing `"google"` with `"oidc"`, aside from obfuscation.
 
 #### *Advcanced Old Config Example*
 
@@ -713,7 +712,7 @@ This example was chosen because I wanted to highlight an advantage of supporting
 
 #### *Upgrading to v1.1.22*
 
-If you were already using a meticulusly configured oidc strategy, all of your configs will still be used. You will simply see a warning in the logs if any depreciated properties were used. If you check the authLog there are additional details about the old config and provide the new place to put that information. In this advanced config, even the groups will continue to work just as they did before without any user intervention when upgrading from a version of MeshCentral pre v1.1.22. There are no step to take and no action is needed, moving the configs to the new locations is completely optional at the moment.
+If you were already using a meticulously configured oidc strategy, all of your configs will still be used. You will simply see a warning in the logs if any deprecated properties were used. If you check the authlog there will be additional details about the old config and it will provide the new place to put that information. In this advanced config, even the groups will continue to work just as they did before without any user intervention when upgrading from a version of MeshCentral pre v1.1.22. There are no steps to take and no action is needed, moving the configs to the new locations is completely optional at the moment.
 
 # Links
 

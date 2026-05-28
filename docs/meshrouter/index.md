@@ -175,5 +175,5 @@ MeshCentral Router is a free, open source tool for routing TCP and UDP traffic o
 
 ## License
 
-MeshCentral, MeshCentral Router and this document are all opens source and licensed using
+MeshCentral, MeshCentral Router and this document are all open source and licensed using
 Apache 2.0, the full license can be found at <https://www.apache.org/licenses/LICENSE-2.0>.

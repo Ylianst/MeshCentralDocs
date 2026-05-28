@@ -137,7 +137,7 @@ For XMPP integration, you need to provide MeshCentral with a XMPP server, userna
 }
 ```
 
-An easy way to get setup with XMPP is to create a free account with [chatterboxtown.us](https://chatterboxtown.us/) and then, setup MeshCentral with the service value set to "chatterboxtown.us" along with the username and password of you account. This can be done in minutes. Once setup, users will be able to setup and verify XMLL accounts and use this for notifications and 2FA verification.
+An easy way to get setup with XMPP is to create a free account with [chatterboxtown.us](https://chatterboxtown.us/) and then, setup MeshCentral with the service value set to "chatterboxtown.us" along with the username and password of your account. This can be done in minutes. Once setup, users will be able to setup and verify XMPP accounts and use this for notifications and 2FA verification.
 
 ## CallMeBot Setup
 

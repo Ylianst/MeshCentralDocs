@@ -18,7 +18,7 @@ For the syntax, docker will be used as default. This is done because podman also
 
 | Tag-name | Explanation |
 |--------|-----|
-| `master` | This tag belongs to the image which is built on every new commit to the main branch, therefor it has the latest code. |
+| `master` | This tag belongs to the image which is built on every new commit to the primary branch, therefore it has the latest code. |
 | `latest` | This tag takes the latest released version of MeshCentral.  |
 | `1.1.51` | You can also specify the specific MeshCentral release with its tag, for example:  `ghcr.io/ylianst/meshcentral:1.1.43` |
 

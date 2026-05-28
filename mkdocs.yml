@@ -3,6 +3,7 @@ site_name: "MeshCentral Documentation"
 nav:
   - Home:
     - 'Abstract': 'index.md'
+  - 'Project Repositories': 'repositories/'
 
   - 'Install':
     - 'Abstract': 'install/abstract.md'
@@ -60,8 +61,8 @@ site_url: "https://docs.meshcentral.com"
 dev_addr: "0.0.0.0:8010"
 
 # Repository
-repo_name: "Ylianst/MeshCentral"
-repo_url: "https://github.com/Ylianst/MeshCentral"
+repo_name: "Ylianst/MeshCentralDocs"
+repo_url: "https://github.com/Ylianst/MeshCentralDocs"
 
 theme:
   name: "material"

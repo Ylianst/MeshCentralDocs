@@ -1,9 +1,9 @@
 # This section will go into how to configure a local database as backend.
 
 Following [the schema](https://github.com/Ylianst/MeshCentral/blob/master/meshcentral-config-schema.json) we make the following changes to our `config.json`.<br>
-Some requires keys have been omitted to further the focus on database configuration. Don't remove these as well.
+Some required keys have been omitted to focus on database configuration. Do not remove these from your config.
 
-By default MeshCentral uses NeDB so therefor to change that to another database type, do the following:
+By default MeshCentral uses NeDB. To change to another database type, do the following:
 
 ---
 

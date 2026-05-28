@@ -1,7 +1,7 @@
 # This section will go into how to configure PostgreSQL as a database backend.
 
 Following [the schema](https://github.com/Ylianst/MeshCentral/blob/master/meshcentral-config-schema.json) we make the following changes to our `config.json`.<br>
-Some requires keys have been omitted to further the focus on database configuration. Don't remove these as well.
+Some required keys have been omitted to focus on database configuration. Do not remove these from your config.
 
 ---
 
