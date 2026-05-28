@@ -38,6 +38,8 @@ If you're looking to contribute beyond translations, such as updating documentat
 
     > Once your pull request is approved and merged by a maintainer, your contributions will be incorporated into the MeshCentral project. Congratulations, and thank you for helping improve MeshCentral!
 
+---
+
 ## 🗣️ Contribute to MeshCentral's Multilingual Support
 
 To make MeshCentral multilingual, your contributions are crucial. Follow these steps to translate the interface into various languages.
