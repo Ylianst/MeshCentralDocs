@@ -99,6 +99,7 @@ alert TITLE, CAPTION [, TIMEOUT]
 **coreinfo**
 
 **cpuinfo**
+: Returns JSON-formatted info about CPU, memory and temperatures
 
 **cs**
 : Display Windows Connected Standby State
@@ -164,6 +165,7 @@ kill [pid]
 : Displays saves location information about the connected agent
 
 **lock**
+: Locks user session
 
 **log**
 : Writes a message to the logfile
