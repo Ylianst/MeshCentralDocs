@@ -99,6 +99,7 @@ alert TITLE, CAPTION [, TIMEOUT]
 **coreinfo**
 
 **cpuinfo**
+: Returns JSON-formatted info about CPU, memory and temperatures
 
 **cs**
 : Display Windows Connected Standby State
@@ -145,6 +146,12 @@ eval [code]
 **info**
 : Returns general information about the agent, such as connected state, loaded modules, LMS state, etc
 
+**installedapps**
+: Returns the list of installed apps/packages
+
+**installedstoreapps**
+: Returns the list of installed store apps (Windows only)
+
 **kill**
 : Sends a SIGKILL signal to the specified PID
 ```
@@ -158,6 +165,7 @@ kill [pid]
 : Displays saves location information about the connected agent
 
 **lock**
+: Locks user session
 
 **log**
 : Writes a message to the logfile
