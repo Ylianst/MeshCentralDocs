@@ -147,7 +147,7 @@ eval [code]
 : Returns general information about the agent, such as connected state, loaded modules, LMS state, etc
 
 **installedapps**
-: Returns the list of installed packages (Linux only)
+: Returns the list of installed apps/packages
 
 **installedstoreapps**
 : Returns the list of installed store apps (Windows only)
