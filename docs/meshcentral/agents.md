@@ -145,6 +145,12 @@ eval [code]
 **info**
 : Returns general information about the agent, such as connected state, loaded modules, LMS state, etc
 
+**installedapps**
+: Returns the list of installed packages (Linux only)
+
+**installedstoreapps**
+: Returns the list of installed store apps (Windows only)
+
 **kill**
 : Sends a SIGKILL signal to the specified PID
 ```
