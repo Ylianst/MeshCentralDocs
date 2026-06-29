@@ -372,7 +372,7 @@ Here we see that in a specific device group, there are 13 devices.
 
 ### Adding and removing accounts
 
-MeshCtrl can be used to add and remove user accounts. This is great is you want to automate MeshCentral in some situations. Normally, an administrator can go to the “My Users” tab and press “New Account…” button to create a new account. 
+MeshCtrl can be used to add and remove user accounts. This is great if you want to automate MeshCentral in some situations. Normally, an administrator can go to the “My Users” tab and press “New Account…” button to create a new account. 
 
 ![](images/2022-05-16-22-04-06.png)
 
