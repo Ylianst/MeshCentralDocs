@@ -226,7 +226,7 @@ There are many ways to change this certificate for a more appropriate certificat
 
 This certificate is used to authenticate the server to agents. It’s signed by the root above and when installing an agent, the hash of this certificate is given to the agent so that it can connect back to the server securely. This certificate is RSA3072 unless the option `--fastcert` is used, in that case a RSA2048 certificate is generated. 
 
-The `meshcentral-data` folder contains critical server information including private keys therefore, it’s important that it be well protected. It’s important to backup the `meshcentral-data` folder and keep the backup in a secure place. If, for example the “agent certificate” on the server is lost, there is no hope for agents ever be able to connect back to this server. All agents will need to be re-installed with a new trusted certificate. 
+The `meshcentral-data` folder contains critical server information including private keys therefore, it’s important that it be well protected. It’s important to backup the `meshcentral-data` folder and keep the backup in a secure place. If, for example, the “agent certificate” on the server is lost then agents will no longer be able to connect back to the server. All agents will need to be re-installed with a new trusted certificate. 
 
 If someone re-installs a server, placing the `meshcentral-data` folder back with these certificates should allow the server to resume normal operations and accept connections for Intel AMT and agents as before. 
 
@@ -416,10 +416,10 @@ MeshCentral is a free, open source and powerful remote management solution that 
 
 ## License
 
-MeshCentral and this document are both opens source and licensed using Apache 2.0, the full license can be found at [https://www.apache.org/licenses/LICENSE-2.0](https://www.apache.org/licenses/LICENSE-2.0)
+MeshCentral and this document are both open source and licensed using Apache 2.0, the full license can be found at [https://www.apache.org/licenses/LICENSE-2.0](https://www.apache.org/licenses/LICENSE-2.0)
 
 ## PDF and ODT handout(s).
 
 [MeshCentral Guide](https://meshcentral.com/docs/MeshCentral2UserGuide.pdf)
 
-MeshCmd Guide [as .pdf](https://meshcentral.com/docs/MeshCmdUserGuide.pdf) [as .odt](../documents/MeshCentral%20Design%20&%20Architecture%20v0.0.4.odt)
+MeshCmd Guide [as .pdf](https://meshcentral.com/docs/MeshCmdUserGuide.pdf) [as .odt](../documents/MeshCmd%20Design%20&%20Architecture%20v0.0.4.odt)

@@ -238,22 +238,22 @@ As indicated before, the settings section of the config.json is equivalent to pa
 
 | **Setting**     | **Description** |
 |------------------|-----------------|
-| **Cert** | Sets the DNS name of the server. If this name is not set, the server will run in "LAN mode". When set, the server"s web certificate will use this name and the server will instruct agents and browsers to connect to that DNS name. You must set a server DNS name to run in "WAN mode". MeshCentral will not configure your DNS server. The DNS name must be configured separately. |
-| **Port** | This sets the main web port used by the MeshCentral server and it"s the same port that users and mesh agents will connect to. The default port is 443, but if the port is busy, the next available higher port is used (.e.g. 444) |
-| **AliasPort** | Sets the main port that will be used by the server externally. By default is the same as "Port" above, but can be set to be different when next. See "Server port aliasing" section for more details. |
-| **RedirPort** | This is the port for redirecting traffic in the web server. When the server is configured with HTTPS, users that uses HTTP will be redirected to HTTPS. Port 80 is the default port. So, redirection will happen from port 80 to port 443. |
-| **MpsPort** | Port for Intel" AMT Management Presence Server to receive Intel" AMT CIRA (Client Initiated Remote Access) connections. The default is port 4433. This port is disabled in LAN mode. If user don"t plan on using Intel" AMT for management, this port can be left as-is. |
-| **TLSOffload** | By default this option is set to "false". If set to "true", server will run both web port and the Intel AMT MPS port without TLS with the assumption that a TLS offloading is taking care of this task. For further details, see the "TLS Offloading" section. This option can also be set to the IP address of the reverse-proxy in order to indicate to MeshCental to only trust HTTP X-Forwarded headers coming from this IP address. See the "Reverse-Proxy Setup" section for an example.|
+| **Cert** | Sets the DNS name of the server. If this name is not set, the server will run in "LAN mode". When set, the server's web certificate will use this name and the server will instruct agents and browsers to connect to that DNS name. You must set a server DNS name to run in "WAN mode". MeshCentral will not configure your DNS server. The DNS name must be configured separately. |
+| **Port** | This sets the main web port used by the MeshCentral server and it's the same port that users and mesh agents will connect to. The default port is 443, but if the port is busy, the next available higher port is used (.e.g. 444) |
+| **AliasPort** | Sets the main port that will be used by the server externally. By default, this is set to the same port as "Port" above. See "Server port aliasing" section for more details. |
+| **RedirPort** | This is the port for redirecting traffic in the web server. When the server is configured with HTTPS, users that use HTTP will be redirected to HTTPS. Port 80 is the default port. So, redirection will happen from port 80 to port 443. |
+| **MpsPort** | Port for Intel AMT Management Presence Server to receive Intel AMT CIRA (Client Initiated Remote Access) connections. The default is port 4433. This port is disabled in LAN mode. If users don't plan on using Intel AMT for management, this port can be left as-is. |
+| **TLSOffload** | By default this option is set to "false". If set to "true", server will run both web port and the Intel AMT MPS port without TLS with the assumption that a TLS offloading is taking care of this task. For further details, see the "TLS Offloading" section. This option can also be set to the IP address of the reverse-proxy in order to indicate to MeshCentral to only trust HTTP X-Forwarded headers coming from this IP address. See the "Reverse-Proxy Setup" section for an example.|
 | **SelfUpdate** | When set to "true" the server will check for a new version and attempt to self-update automatically a bit after midnight local time every day. If set to a specific version such as "1.1.21" the server will immediately update to the specified version on startup if it's not already at this version. |
-| **SessionKey** | This is the encryption key used to secure the user"s login session. It will encrypt the browser cookie. By default, this value is randomly generated each time the server starts. If many servers are used with a load balancer, all servers should use the same session key. In addition, one can set this key so that when the server restarts, users do not need to re-login to the server. |
+| **SessionKey** | This is the encryption key used to secure the user's login session. It will encrypt the browser cookie. By default, this value is randomly generated each time the server starts. If many servers are used with a load balancer, all servers should use the same session key. In addition, one can set this key so that when the server restarts, users do not need to re-login to the server. |
 | **Minify** | Default value is 0, when set to 1 the server will serve "minified" web pages, that is, web pages that have all comments, white spaces and other unused characters removed. This reduces the data size of the web pages by about half and reduced the number requests made by the browser. The source code of the web page will not be easily readable, adding "&nominify=1" at the end of the URL will override this option.  |
 | **User** | Specify a username that browsers will be automatically logged in as. Useful to skip the login page and password prompts. Used heavily during development of MeshCentral.  |
 | **NoUsers** | By default this option is "false" and if set to "true", server will only accept users from localhost (127.0.0.1) and will not have a login page. Instead, a single user is always logged in. This mode is useful if user opts to setup MeshCentral as a local tool instead of as a multi-user server |
 | **MpsCert** | Specifies the official name of the Intel AMT MPS server. If not specified, this is the same as the official server name specified by "cert". This option is generally used with MPS aliasing, see the "Server port aliasing" section for more information. |
 | **MpsAliasPort** | Specify an alias port for the MPS server. See the section on "Server port aliasing" for use of this option. |
 | **ExactPorts** | If this option is set to "true", only the exact port will be used. By default, if a port is in use, the server will try to bind the next available higher port. This is true for the "port", "redirport" and "mpsport" settings. |
-| **Lanonly** | Server"s default mode if not set with "--cert" option. If this option is set to "true", Intel" AMT MPS will be disabled, server name and fixed IP option will be hidden. Mesh agents will search for the server using multicast on the network. |
-| **Wanonly** | A recommended option when running MeshCentral in the cloud. If set to "true", server will run as a cloud service and assumes LAN features are disabled. For this option to work, the server must have a fixed IP or DNS record using the "--cert"" option. In this mode, LAN discovery features are disabled. |
+| **Lanonly** | Server's default mode if not set with "--cert" option. If this option is set to "true", Intel AMT MPS will be disabled, server name and fixed IP option will be hidden. Mesh agents will search for the server using multicast on the network. |
+| **Wanonly** | A recommended option when running MeshCentral in the cloud. If set to "true", server will run as a cloud service and assumes LAN features are disabled. For this option to work, the server must have a fixed IP or DNS record using the "--cert" option. In this mode, LAN discovery features are disabled. |
 | **AllowFraming** | By default is set to "false". If set to "true", web pages will be served in a way that allows them to be placed within an iframe of another web page. This is useful when you wish to add MeshCentral features into another website. |
 | **AllowLoginToken** | By default is set to "false". If set to "true", the server allows login tokens to be used in the URL as a replacement for user login. This is useful along with "allowFraming" option to embed MeshCentral features into another website. |
 | **MongoDB** | Used to specify the MongoDB connection string. If not specified, MeshCentral will use the NeDB database with the file meshcentral.db in the meshcentral-data folder. To setup MongoDB, please refer to the Database section of this document. |
@@ -508,7 +508,7 @@ For example, you can show the list of users with the `--showusers`
 
 ### MongoDB Setup
 
-MongoDB is useful when setting up MeshCentral for two or more peer servers given that all peer servers much have access to the same database. NeDB and MongoDB have similar access interfaces, hence the DB migration from one to the other is straight forward. Installing MongoDB depends on its host OS, so do check for available download options on [MongoDB's website](mongodb.com).
+MongoDB is useful when setting up MeshCentral for two or more peer servers given that all peer servers must have access to the same database. NeDB and MongoDB have similar access interfaces, hence the DB migration from one to the other is straightforward. Installing MongoDB depends on its host OS, so do check for available download options on [MongoDB's website](https://mongodb.com).
 
 In this guide, we will focus on the 64-bit version of MongoDB (with SSL support!)'s installer. 
 
@@ -694,7 +694,7 @@ Before moving forward with this section, make sure your MeshCentral server is wo
 
 The only mandatory field is the email address, please enter a valid one.
 
-The names section is a list of domain names the requested certificate will be valid for. This must be a list of DNS names that are already pointing to your server. It’s important to understand you are not requesting these DNS names, rather, Let’s Encrypt will makes requests to prove control over all of these domain name before issuing the certificate. All the domain names you enter must point to the server and HTTP port 80 must be reachable over the internet. If you don’t specify names, the default MeshCentral certificate name is used, that is the configured `--cert [name]`.
+The names section is a list of domain names the requested certificate will be valid for. This must be a list of DNS names that are already pointing to your server. It’s important to understand you are not requesting these DNS names, rather, Let’s Encrypt will makes requests to prove control over all of these domain name before issuing the certificate. All the domain names you enter must point to the server and HTTP port 80 must be reachable over the internet. If you don’t specify names, the default MeshCentral certificate name is used, that is the configured `--cert \[name\]`.
 
 The RSA key size can only be 2048 or 3072, with the default being 3072. This is the number of bit used for the RSA key in the certificate. Bigger is more secure, but takes more time to compute.
 
@@ -812,7 +812,7 @@ To enable this feature, configure `config.json` file to allow login tokens.
 
 Set both allowLoginToken and allowFraming to `true` to use login tokens along with framing MeshCentral within another web page. 
 
-Next, create a token. Execute MeshCentral with the `--logintoken [userid]` switch and userid value with the example below:
+Next, create a token. Execute MeshCentral with the `--logintoken \[userid\]` switch and userid value with the example below:
 
 ![](images/2022-05-19-00-03-32.jpg)
 
@@ -916,7 +916,7 @@ MeshCentral has a web relay feature that allows a user to access remote web site
 
 ## 🖧 Device Groups with Relay Agent
 
-MeshCentral supports the local device group allowing devices that do not have an agent to be managed through MeshCentral with regular SSH, SFTP, RDP, VNC protocols. Until now, the MeshCentral server had to be in LAN or Hybrid modes to support his device group and the managed devices had to be on the same network as the MeshCentral server. Starting with v1.0.11, users can create a local device group specifying a MeshAgent as a relay. This makes it possible to manage agent-less devices from anywhere on the Internet even if the server is in WAN mode. Simply install a single device with a MeshAgent on a network and create a local device group with that device as the relay.
+MeshCentral supports the local device group allowing devices that do not have an agent to be managed through MeshCentral with regular SSH, SFTP, RDP, VNC protocols. Until now, the MeshCentral server had to be in LAN or Hybrid modes to support this device group and the managed devices had to be on the same network as the MeshCentral server. Starting with v1.0.11, users can create a local device group specifying a MeshAgent as a relay. This makes it possible to manage agent-less devices from anywhere on the Internet even if the server is in WAN mode. Simply install a single device with a MeshAgent on a network and create a local device group with that device as the relay.
 
 ![](images/2022-05-31-10-30-07.jpg)
 
@@ -1328,11 +1328,11 @@ In production mode, ExpressJS will cache some files in memory making the web ser
 
 If the MeshCentral server is setup with a certificate name and not setup to use Windows domain authentication, then users will have the options to use 2-step authentication using the Google Authenticator application or any compatible application. Use of this option should be encouraged for users that manage a lot of critical computers. Once active the users will need to enter their username, password and a time limited token to login.
 
-To get this features setup, users will need to go to the “My Account” tab or the “My Account” menu in the mobile application. They then select, “Add 2-stop login” and follow the instructions.
+To get this features setup, users will need to go to the “My Account” tab or the “My Account” menu in the mobile application. They then select, “Add 2-step login” and follow the instructions.
 
 ![](images/2022-05-19-00-38-11.png)
 
-Note that if a user performs a password recovery using email, the 2-step authentication is then turned off and will need to be turned on again. This is not idea as someone being able to intercept the user’s email could still log into the web site. Users should make sure to properly protect their email account.
+Note that if a user performs a password recovery using email, the 2-step authentication is then turned off and will need to be turned on again. This is not ideal as it becomes possible to intercept the user’s email and log into the web site without further validation. Users should make sure to properly protect their email account.
 
 Another form of MFA or Multi-factor Authentication is hardware based OTP (One Time Password) solution providing 2FA or Two-factor authentication. Yubikey is fully supported in MeshCentral.
 
@@ -1346,7 +1346,7 @@ And taking authentication to the next step is removing the login page entirely. 
   <iframe width="320" height="180" src="https://www.youtube.com/embed/-WKY8Wy0Huk" frameborder="0" allowfullscreen></iframe>
 </div>
 
-You can also setup [Duo 2FA](https://github.com/Ylianst/MeshCentral/blob/master/docs/docs/meshcentral/security.md#duo-2fa-setup) which is a commertial offering.
+You can also setup [Duo 2FA](security.md#duo-2fa-setup) which is a commercial offering.
 
 ## 💾 Server Backup & Restore
 
@@ -1548,7 +1548,7 @@ In addition to database specific information, the graphs track CPU, memory and d
 
 As with any web application deployed in organization, it’s convenient and more secure for users to have a single set of credentials that can be used across many services. In this section we take a look at how to configure MeshCentral so that you can sign-in using credentials from other services. This allows users to completely skip creating a user account on MeshCentral or having to remember usernames and password for one more web site. There are two single sign-on protocols that are supported in MeshCentral, OAuth2 and SAML. We will take a look at an example for each one.
 
-Before you get started, your MeshCentral server must be publicly facing on the internet and have a valid TLS certificate. For example, by setting up Let’s Encrypt. After the web site is working correctly user the steps below.
+Before you get started, your MeshCentral server must be publicly facing on the internet and have a valid TLS certificate. For example, by setting up Let’s Encrypt. After the web site is working correctly use the steps below.
 
 
 ### LDAP
@@ -1908,7 +1908,7 @@ MeshCentral is a free, open source and powerful remote management solution that 
 
 ## License
 
-MeshCentral and this document are both opens source and licensed using Apache 2.0, the full license can be found at <https://www.apache.org/licenses/LICENSE-2.0>.
+MeshCentral and this document are both open source and licensed using Apache 2.0, the full license can be found at <https://www.apache.org/licenses/LICENSE-2.0>.
 
 ## Annex 1: Sample Configuration File
 
@@ -2012,4 +2012,4 @@ MeshCentral has built-in web-based integration of SSH in the "Terminal" tab and 
 
 [MeshCentral Guide](https://meshcentral.com/docs/MeshCentral2UserGuide.pdf)
 
-MeshCmd Guide [as .pdf](https://meshcentral.com/docs/MeshCmdUserGuide.pdf) [as .odt](../documents/MeshCentral%20User's%20Guide%20v0.2.9.odt)
+MeshCmd Guide [as .pdf](https://meshcentral.com/docs/MeshCmdUserGuide.pdf) [as .odt](../documents/MeshCmd%20User's%20Guide%20v0.2.9.odt)

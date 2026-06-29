@@ -176,4 +176,4 @@ The lines starting with `Service:` are coming from the background service. At th
 
 ## License
 
-MeshCentral, MeshCentral Satellite and this document are both opens source and licensed using Apache 2.0, the full license can be found at [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+MeshCentral, MeshCentral Satellite and this document are both open source and licensed using Apache 2.0, the full license can be found at [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).

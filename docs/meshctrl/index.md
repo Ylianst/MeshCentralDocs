@@ -1,6 +1,6 @@
 # MeshCtrl
 
-MeshCmd Guide [as .pdf](https://meshcentral.com/docs/MeshCtrlUsersGuide.pdf) [as .odt](../documents/MeshCtrl%20User's%20Guide%20v0.0.1.odt)
+MeshCtrl Guide [as .pdf](https://meshcentral.com/docs/MeshCtrlUsersGuide.pdf) [as .odt](../documents/MeshCtrl%20User's%20Guide%20v0.0.1.odt)
 
 ## Video Walkthrough
 
@@ -277,7 +277,7 @@ agentdownload
 report
 ```
 
-You can get this list by just running MeshCtrl without any argument and can get more information on each action by typing “meshctrl help [action]” 
+You can get this list by just running MeshCtrl without any argument and can get more information on each action by typing `meshctrl help \[action\]`.
 
 ![example](images/amt_commands.png)
 
@@ -397,7 +397,7 @@ This will create a basic user account with the specified “SampleUser” userna
 --notools          - Account not see MeshCMD download links.
 ```
 
-Instead of specifying a password, one can specify “--randompass" to have MeshCtrl generate a random password, this is typically use along with “--resetpass" and “--email" to cause the user to perform a password reset the first time a login occurs. 
+Instead of specifying a password, one can specify “--randompass" to have MeshCtrl generate a random password, this is typically used along with “--resetpass" and “--email" to cause the user to perform a password reset the first time a login occurs. 
 
 The permission arguments are used to grant server permissions to the new account. The “-- siteadmin" argument will grant this account full site administrator rights and all other permission arguments are ignored. The other permission arguments can be combined. 
 
@@ -494,4 +494,4 @@ MeshCtrl is an essential tools in every MeshCentral administrator’s tool box. 
 
 ## License 
 
-MeshCtrl and this document are both opens source and licensed using Apache 2.0, the full license can be found at [https://www.apache.org/licenses/LICENSE-2.0](https://www.apache.org/licenses/LICENSE-2.0) 
+MeshCtrl and this document are both open source and licensed using Apache 2.0, the full license can be found at [https://www.apache.org/licenses/LICENSE-2.0](https://www.apache.org/licenses/LICENSE-2.0) 

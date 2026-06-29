@@ -24,6 +24,10 @@ The [Installation Guide](install/quickstart.md) has detailed instructions for in
 
 The [Design and Architecture Guide](design/index.md) is a short document that includes information on the design overview, dependencies, source code descriptions of each file, certificates, TLS security, the agent to server handshake, browser to agent relay and WebRTC and the messenger service.
 
+## 🗂️ Repositories
+
+MeshCentral is maintained across multiple repositories. See the [project repository directory](repositories/index.md) for the main docs repo, the primary application repo, and other related project repositories.
+
 ## 📺 Video Tutorials
 
 You can watch many tutorial videos on the [MeshCentral YouTube Channel](https://www.youtube.com/channel/UCJWz607A8EVlkilzcrb-GKg/videos). Here are some essential ones to get you started :

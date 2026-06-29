@@ -17,7 +17,7 @@ Access the official MeshCmd user guide in your preferred format
 
 ## 🧾 Abstract
 
-This user guide contains all essential information for the user to make full use of MeshCmd, a command line tool used to perform tasks on MeshCentral and for Intel® AMT. This tool run on Windows and Linux and perform a wide array of different tasks. From routing traffic over the Internet to activating Intel AMT, MeshCmd is a great do it all tool for computer management. 
+This user guide contains all essential information for the user to make full use of MeshCmd, a command line tool used to perform tasks on MeshCentral and for Intel® AMT. This tool runs on Windows and Linux and performs a wide array of different tasks. From routing traffic over the Internet to activating Intel AMT, MeshCmd is a great do it all tool for computer management. 
 
 ## 📘 Introduction
 
@@ -95,7 +95,7 @@ In order to start using MeshCmd in this way, you first need to have access to a 
 
 ![](images/2022-05-15-15-23-45.png)
 
-Of course, this picture is a bit simplify. Firewalls, NAT routers and HTTP proxies may be in the way and the MeshAgent on the remote computer will act at the TCP traffic relay in most cases. 
+Of course, this picture is a bit simplistic. Firewalls, NAT routers and HTTP proxies may be in the way and the MeshAgent on the remote computer will act at the TCP traffic relay in most cases. 
 
 One typical use of this is to route local port `1234` to port Microsoft RDP port 3389 on a remote device. Once routed, you can start a RDP session on `localhost:1234` and get a RDP session to the remote device. The RDP protocol is feature rich and efficient, so you get a great user experience regardless of where in the world the remote computer is at. 
 
@@ -135,7 +135,7 @@ Now, the traffic router is ready. You can now RDP to localhost:1234 and login to
 
 ## 🧭 MeshCommander
 
-MeshCommander is a web based Intel AMT management console. MeshCmd has no less then three different versions of MeshCommander built-in, so if you are using Intel AMT, it’s worth a moment to get some knowledge about MeshCommander which is available as a standalone tool along with a full user’s guide at:[http://www.meshcommander.com/](http://www.meshcommander.com/)and also included as part of MeshCentral. 
+MeshCommander is a web based Intel AMT management console. MeshCmd has no less than three different versions of MeshCommander built-in, so if you are using Intel AMT, it’s worth a moment to get some knowledge about MeshCommander which is available as a standalone tool along with a full user’s guide at:[http://www.meshcommander.com/](http://www.meshcommander.com/)and also included as part of MeshCentral. 
 
 The three versions included in MeshCmd are : 
 
@@ -147,7 +147,7 @@ In this section, we review the three versions, how they are used and what can be
 
 ### 1. MeshCommander local web server
 
-You can start MeshCommander on a local web server by typing `meshcmd meshcommander`. By default, local port `3000` is used, but you can optionally specify the port using `--localport [port]`. Running it with look like this: 
+You can start MeshCommander on a local web server by typing `meshcmd meshcommander`. By default, local port `3000` is used, but you can optionally specify the port using `--localport [port]`. Running it will look like this: 
 
 ```bash
 C:\MeshCmd>meshcmd meshcommander
@@ -212,7 +212,7 @@ Because it’s in this mode, you can use the web interface to de-activate Intel 
 
 ![](images/2022-05-15-15-30-41.png)
 
-MicroLMS along with MeshCommander for LMS is very useful, especially on Linux as it offers a single tool to setup and configuration Intel AMT. If you wish you run MicroLMS without MeshCommander being available on port 16994, run MeshCmd with `--noconsole`: 
+MicroLMS along with MeshCommander for LMS is very useful, especially on Linux as it offers a single tool to setup and configuration Intel AMT. If you wish to run MicroLMS without MeshCommander being available on port 16994, run MeshCmd with `--noconsole`: 
 
 ```bash
 C:\MeshCmd>meshcmd microlms --noconsole
@@ -418,7 +418,7 @@ You can also save the audit log to file using the `--output` option.
 
 ## 💻 Running Intel AMT script
 
-MeshCmd has a full WSMAN stack built-in and can be used to run `.mescript` file on a target Intel AMT computer. Script file are useful when you want to run a set of actions on one or more Intel AMT computers at once. You can build a .mescript file using the script editor within MeshCommander. 
+MeshCmd has a full WSMAN stack built-in and can be used to run `.mescript` file on a target Intel AMT computer. Script files are useful when you want to run a set of actions on one or more Intel AMT computers at once. You can build a .mescript file using the script editor within MeshCommander. 
 
 This script editor allows the user to drag & drop script blocks, set parameters on each block and test the script against a connected Intel AMT computer. 
 
@@ -485,8 +485,8 @@ Possible arguments:
 
 ## 🏁 Conclusion
 
-MeshCmd is a cross-platform command line tools that perform an ever-growing list of actions that are important for remote computer management. MeshCmd works alone or with MeshCentral and MeshCommander to offer a suite of free, opens source and powerful tools that work well together. 
+MeshCmd is a cross-platform command-line tool that performs an ever-growing list of actions that are important for remote computer management. MeshCmd works alone or with MeshCentral and MeshCommander to offer a suite of free, open source and powerful tools that work well together. 
 
 ## License
 
-MeshCmd and this document are both opens source and licensed using Apache 2.0, the full license can be found at [https://www.apache.org/licenses/LICENSE-2.0](https://www.apache.org/licenses/LICENSE-2.0) 
+MeshCmd and this document are both open source and licensed using Apache 2.0, the full license can be found at [https://www.apache.org/licenses/LICENSE-2.0](https://www.apache.org/licenses/LICENSE-2.0) 
