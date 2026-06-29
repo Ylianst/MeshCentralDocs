@@ -17,9 +17,9 @@ Once done, edit the config.json file and set one or all of the following values:
 ```json
 "domains": {
   "": {
-    "Title": "",
-    "Title2": "",
-    "TitlePicture": "title-sample.png",
+    "title": "",
+    "title2": "",
+    "titlePicture": "title-sample.png",
     "loginPicture": "logintitle-sample.png",
     "welcomeText": "This is sample text",
     "welcomePicture": "mainwelcome-04.jpg",
