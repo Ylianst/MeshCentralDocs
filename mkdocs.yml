@@ -27,6 +27,8 @@ nav:
     - 'All Configuration Options': 'meshcentral/config.md'
     - 'SSL/TLS': 'meshcentral/SSLnletsencrypt.md'
     - 'Agent Information': 'meshcentral/agents.md'
+    - 'Agent Builds': 'meshcentral/agent-builds.md'
+    - 'Agent Release Format': 'meshcentral/agent-releases.md'
     - 'Assistant': 'meshcentral/assistant.md'
     - 'Code Signing': 'meshcentral/codesigning.md'
     - 'Debugging': 'meshcentral/debugging.md'
