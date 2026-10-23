@@ -1,5 +1,7 @@
 # Mesh Agents
 
+MeshCentral downloads the agent binaries it serves from GitHub releases instead of shipping them in its package. See [Agent Downloads](agent-downloads.md) for servers without internet access and the settings that control this.
+
 ## Windows
 
 Default Install Path: `c:\Program Files\Mesh Agent`

@@ -40,6 +40,8 @@ node node_modules/meshcentral
 
 That's it\! MeshCentral will now set itself up and begin managing computers on your **local network** that have the MeshAgent installed.
 
+> 📦 **Agents:** The agent installers are no longer included in the npm package. On its first start the server downloads them from GitHub (about 120 MiB) into `meshcentral-data/agentbuilds`. A server without internet access needs them copied in by hand, as described in [Agent Downloads](../meshcentral/agent-downloads.md).
+
 #### Running as a Service
 
 To run MeshCentral as a persistent background service (recommended for production environments), use the --install argument when starting the server. Consult the MeshCentral documentation for OS-specific service setup details.
