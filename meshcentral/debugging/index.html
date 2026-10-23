@@ -15,6 +15,7 @@
         <link rel="canonical" href="https://docs.meshcentral.com/meshcentral/debugging/">
       
       
+      
         <link rel="prev" href="../codesigning/">
       
       
@@ -25,7 +26,7 @@
       
       
       <link rel="icon" href="../../images/favicon.ico">
-      <meta name="generator" content="zensical-0.0.46">
+      <meta name="generator" content="zensical-0.0.71">
     
     
       
@@ -36,12 +37,12 @@
       
         
       
-      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.19d3147f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.e442bf79.min.css">
       
         
           
         
-        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.b60ce83d.min.css">
       
       
 
@@ -83,14 +84,11 @@
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#debugging" class="md-skip">
-          Skip to content
-        </a>
-      
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
     </div>
     <div data-md-component="announce">
       
@@ -176,7 +174,7 @@
         <a href="https://github.com/Ylianst/MeshCentralDocs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     Ylianst/MeshCentralDocs
@@ -392,7 +390,7 @@
       <a href="https://github.com/Ylianst/MeshCentralDocs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     Ylianst/MeshCentralDocs
@@ -442,18 +440,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Home
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -477,10 +476,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -552,18 +552,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Install
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -587,10 +588,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -614,10 +615,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -656,18 +657,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3_3">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Installation Guides
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -691,10 +693,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -718,10 +720,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -745,10 +747,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -772,18 +774,19 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -822,18 +825,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_4">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3_4">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Databases
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -857,10 +861,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -884,10 +888,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -911,10 +915,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -938,18 +942,19 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -988,18 +993,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_5">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3_5">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Security
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -1023,10 +1029,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1050,18 +1056,20 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -1112,18 +1120,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   MeshCentral
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -1147,10 +1156,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1174,10 +1183,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1201,10 +1210,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1228,10 +1237,64 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent-downloads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Agent Downloads
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent-releases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Agent Release Format
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
   
   
   
@@ -1255,10 +1318,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1282,10 +1345,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
     
@@ -1621,10 +1684,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1648,10 +1711,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1675,10 +1738,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1702,10 +1765,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1729,10 +1792,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1756,10 +1819,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1783,10 +1846,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1810,10 +1873,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1837,10 +1900,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1864,10 +1927,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -1913,18 +1977,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Submodules and Features
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -1948,10 +2013,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1975,10 +2040,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2002,10 +2067,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2029,10 +2094,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -2130,18 +2196,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_8">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Other
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -2165,10 +2232,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2192,10 +2259,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -2518,8 +2586,10 @@
             <div class="md-content" data-md-component="content">
               
               <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
                 
                   
+
   
   
 
@@ -2534,12 +2604,12 @@
 <h2 id="meshcentral-server">MeshCentral Server</h2>
 <h3 id="useful-configjs-settings">Useful config.js settings</h3>
 <p><a href="https://github.com/Ylianst/MeshCentral/blob/master/meshcentral-config-schema.json">https://github.com/Ylianst/MeshCentral/blob/master/meshcentral-config-schema.json</a></p>
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;AgentsInRAM&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="nt">&quot;AgentUpdateBlockSize&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2048</span><span class="p">,</span>
-<span class="nt">&quot;agentUpdateSystem&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
-<span class="nt">&quot;noAgentUpdate&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
-<span class="nt">&quot;WsCompression&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="nt">&quot;AgentWsCompression&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<div class="highlight"><pre><span></span><code><span class="nt">"AgentsInRAM"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="nt">"AgentUpdateBlockSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">2048</span><span class="p">,</span>
+<span class="nt">"agentUpdateSystem"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="nt">"noAgentUpdate"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="nt">"WsCompression"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="nt">"AgentWsCompression"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
 </code></pre></div>
 <h3 id="understanding-node-and-paths">Understanding node and paths</h3>
 <p>Note that when running MeshCentral, you should always run from the path that is parent to node_modules, so you do this:</p>
@@ -2563,9 +2633,9 @@ node node_modules\meshcentral --install
 <h3 id="unable-to-update-server">Unable to update server</h3>
 <p>Generally the problem is that MeshCentral can't find the npm tool and therefore, can't run it to see if there is a new version. You can fix this by setting the path to npm in the config.json like this:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;settings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;npmPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c:\\npm.exe&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;npmProxy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://1.2.3.4:80&quot;</span>
+<span class="w">  </span><span class="nt">"settings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"npmPath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c:\\npm.exe"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"npmProxy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://1.2.3.4:80"</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -2612,15 +2682,15 @@ mps          - CIRA Server
 mpscmd       - CIRA Server Commands
 </code></pre></div>
 <p>You can also specify the <code>debug</code> option in the config.json file in the <code>settings</code> section. For example:</p>
-<div class="highlight"><pre><span></span><code>&quot;settings&quot;: {
-  &quot;debug&quot;: &quot;web,amt,mps&quot;
+<div class="highlight"><pre><span></span><code>"settings": {
+  "debug": "web,amt,mps"
 }
 </code></pre></div>
 <h3 id="enabling-trace-in-your-browser-dev-tools">Enabling trace in your browser Dev Tools</h3>
 <p>You can enable browser console tracing by adding <code>trace=1</code> as a parameter to the URL of the MeshCentral main web page. For example <code>https://myserver.com/?trace=1</code>. Once present, open the browser's console window to see all web client tracing messages.</p>
 <p>To log all database queries, change log_statement in /etc/postgresql/13/main/postgresql.conf</p>
 <div class="highlight"><pre><span></span><code># CUSTOM
-log_statement = &#39;all&#39;           # none, ddl, mod, all
+log_statement = 'all'           # none, ddl, mod, all
 </code></pre></div>
 <p>The stacktrace was logged to <code>stdout/journalctl</code>. Supposedly, you can enable debug logging for node modules by adding <code>DEBUG=&lt;modulename&gt;</code> to the environment. </p>
 <p>Adding this to <code>/etc/systemd/system/meshcentral.service</code> should do it but it didn't seem to do anything. </p>
@@ -2644,30 +2714,30 @@ chown tactical:tactical logs
 ln -s ../meshcentral-logs/log.txt /meshcentral/meshcentral-data/log.txt
 </code></pre></div>
 <p>And then add this to your config.</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">&quot;meshErrorLogPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/meshcentral/meshcentral-logs/&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;authLog&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/meshcentral/meshcentral-logs/auth.log&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;log&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="s2">&quot;cookie&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;dispatch&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;main&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;peer&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;web&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;webrequest&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;relay&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;webrelaydata&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;webrelay&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;mps&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;mpscmd&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;swarm&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;swarmcmd&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;agentupdate&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;agent&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;cert&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;db&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;email&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;amt&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;httpheaders&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;websocket&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">"meshErrorLogPath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/meshcentral/meshcentral-logs/"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"authLog"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/meshcentral/meshcentral-logs/auth.log"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"log"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">"cookie"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"dispatch"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"main"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"peer"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"web"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"webrequest"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"relay"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"webrelaydata"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"webrelay"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"mps"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"mpscmd"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"swarm"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"swarmcmd"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"agentupdate"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"agent"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"cert"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"db"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"email"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"amt"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"httpheaders"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"websocket"</span>
 <span class="w">    </span><span class="p">],</span>
 </code></pre></div>
 <p>You'll then have 3 files:</p>
@@ -2678,7 +2748,7 @@ ln -s ../meshcentral-logs/log.txt /meshcentral/meshcentral-data/log.txt
 <p><code>log.txt</code> will now log everything in the Trace tab</p>
 <h3 id="restricting-server-to-specific-ips">Restricting server to specific IP(s)</h3>
 <p>When doing debugging on my development server, I use this line in the settings section to block all agent connections except the agent I want:</p>
-<div class="highlight"><pre><span></span><code>&quot;agentAllowedIp&quot;: [ &quot;192.168.2.147&quot; ],
+<div class="highlight"><pre><span></span><code>"agentAllowedIp": [ "192.168.2.147" ],
 </code></pre></div>
 <p>Of course, this is just for debugging.</p>
 <h3 id="finding-system-id-types">Finding system ID types</h3>
@@ -2686,7 +2756,7 @@ ln -s ../meshcentral-logs/log.txt /meshcentral/meshcentral-data/log.txt
 <p><img alt="ID" src="../images/determine-id.jpg" /></p>
 <h3 id="pull-down-cert-crt-file-from-internet">Pull down cert .crt file from internet</h3>
 <p><a href="https://github.com/Ylianst/MeshCentral/issues/1662#issuecomment-666559391">See #1662</a> We have run into this challenge before, where our .crt file expired and then all our agents were unable to connect. In our case, the TLS cert was available on the internet, and thus, we were able to use these commands to update it:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="se">\|</span><span class="w"> </span>openssl<span class="w"> </span>s_client<span class="w"> </span>-connect<span class="w"> </span>yourdomain.com:443<span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>/dev/null<span class="se">\|</span><span class="w"> </span>sed<span class="w"> </span>-ne<span class="w"> </span><span class="s1">&#39;/-BEGIN   CERTIFICATE-/,/-END CERTIFICATE-/p&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/opt/meshcentral/meshcentral-data/webserver-cert-public.crt
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="se">\|</span><span class="w"> </span>openssl<span class="w"> </span>s_client<span class="w"> </span>-connect<span class="w"> </span>yourdomain.com:443<span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>/dev/null<span class="se">\|</span><span class="w"> </span>sed<span class="w"> </span>-ne<span class="w"> </span><span class="s1">'/-BEGIN   CERTIFICATE-/,/-END CERTIFICATE-/p'</span><span class="w"> </span>&gt;<span class="w"> </span>/opt/meshcentral/meshcentral-data/webserver-cert-public.crt
 service<span class="w"> </span>meshcentral<span class="w"> </span>restart
 </code></pre></div>
 <h2 id="meshagent">MeshAgent</h2>
@@ -2696,7 +2766,7 @@ service<span class="w"> </span>meshcentral<span class="w"> </span>restart
 <h3 id="agent-debug-logs-to-server">Agent Debug Logs to server</h3>
 <p>This automatically downloads all agent error logs into <code>meshcentral-data/agenterrorlogs.txt</code></p>
 <p><a href="https://github.com/Ylianst/MeshCentral/blob/aa58afcc3a5d738177ab7a7b6d0228d72af82b85/meshcentral-config-schema.json#L100">Set</a> in <code>config.json</code></p>
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;agentLogDump&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<div class="highlight"><pre><span></span><code><span class="nt">"agentLogDump"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 </code></pre></div>
 <h3 id="determine-agent-capabilities">Determine Agent capabilities</h3>
 <p>On the server goto the agents console tab. Type:</p>
@@ -2723,10 +2793,10 @@ MeshAgent dbTool.js list
 <p><a href="https://github.com/Ylianst/MeshAgent/issues/89#issuecomment-949901720">MeshAgent#89 (comment)</a></p>
 <p>There are two ways to do this... When debugging, and making changes, you can modify the .js file directly, and just save it in the same folder as the agent binary... The agent will use the .js file from disc if it's there, if it's newer than the one compiled in the binary. You don't even need to restart the agent. You can just clear the core, and reload the core.....</p>
 <p>When you are satisfied with your changes to the .js file, you can use the clipboard, in the following fashion:</p>
-<div class="highlight"><pre><span></span><code>meshagent<span class="w"> </span>-exec<span class="w"> </span><span class="s2">&quot;require(&#39;clipboard&#39;).nativeAddCompressedModule(&#39;foo&#39;);process.exit();&quot;</span>
+<div class="highlight"><pre><span></span><code>meshagent<span class="w"> </span>-exec<span class="w"> </span><span class="s2">"require('clipboard').nativeAddCompressedModule('foo');process.exit();"</span>
 </code></pre></div>
 <p>if the file you modified isn't in the same folder as the agent binary, you can use the following command if you don't want to move the file, and edit it directly in the modules folder:</p>
-<div class="highlight"><pre><span></span><code>meshagent<span class="w"> </span>-exec<span class="w"> </span><span class="s2">&quot;setModulePath(&#39;pathToFolder&#39;);require(&#39;clipboard&#39;).nativeAddCompressedModule(&#39;foo&#39;);process.exit();&quot;</span>
+<div class="highlight"><pre><span></span><code>meshagent<span class="w"> </span>-exec<span class="w"> </span><span class="s2">"setModulePath('pathToFolder');require('clipboard').nativeAddCompressedModule('foo');process.exit();"</span>
 </code></pre></div>
 <p>This command is just like the previous, except it searches for modules in the path specified.</p>
 <p>Just substitute foo, with the name of the module that you modified. It will load the module from disc, compress it, and save it into the clipboard.. So you can just load up your editor for ILibDuktape_Polyfills.c, and find where that particular module is defined... and paste directly from the clipboard... The clipboard will contain all the necessary C code to uncompress and load the module.</p>
@@ -2745,18 +2815,18 @@ MeshAgent dbTool.js list
 </div>
 <h3 id="troubleshooting-agent-connectivity">Troubleshooting Agent connectivity</h3>
 <p>If an agent keeps disconnecting and reconnecting, add this line to the "settings" section of the config.json:</p>
-<div class="highlight"><pre><span></span><code>&quot;agentping&quot;: 30
+<div class="highlight"><pre><span></span><code>"agentping": 30
 </code></pre></div>
 <p>This will cause MeshCentral to "ping" the agent every 30 seconds and the agent to respond with a "pong" each time. That usually solves the issue however, it does generate more traffic. If that works, you can remove the line and try this line instead:</p>
-<div class="highlight"><pre><span></span><code>&quot;agentpong&quot;: 30
+<div class="highlight"><pre><span></span><code>"agentpong": 30
 </code></pre></div>
 <p>This will cause MeshCentral to "pong" the agent every 30 seconds, the agent will not respond. This usually fixes the issue, but you have half the traffic. I would also increase the time like:</p>
-<div class="highlight"><pre><span></span><code>&quot;agentpong&quot;: 90
+<div class="highlight"><pre><span></span><code>"agentpong": 90
 </code></pre></div>
 <p>This is the best, you have one way traffic to all agents every 90 seconds. The larger the number you can get away with the better.</p>
 <p>If you ever get the same problem but on the browser side, you can also use one of these:</p>
-<div class="highlight"><pre><span></span><code>&quot;browserping&quot;: 30
-&quot;browserpong&quot;: 30
+<div class="highlight"><pre><span></span><code>"browserping": 30
+"browserpong": 30
 </code></pre></div>
 <p>Same idea, browser side instead of agent side.</p>
 <h2 id="intel-amt">Intel AMT</h2>
@@ -2810,7 +2880,7 @@ MeshAgent dbTool.js list
 </footer>
       
     </div>
-    <div class="md-dialog" data-md-component="dialog">
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
@@ -2818,10 +2888,14 @@ MeshAgent dbTool.js list
     
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.code.copy","content.code.select","navigation.tabs","navigation.top","navigation.sections","navigation.instant","search.suggest"],"search":"../../assets/javascripts/workers/search.b6b7e04f.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.code.copy","content.code.select","navigation.tabs","navigation.top","navigation.sections","navigation.instant","search.suggest"],"redirect":null,"search":"../../assets/javascripts/workers/search.c47bb847.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ee611ef6.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a2388154.min.js"></script>
       
     
   </body>

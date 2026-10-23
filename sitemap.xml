@@ -4,10 +4,10 @@
         <loc>https://docs.meshcentral.com/</loc>
       </url>
       <url>
-        <loc>https://docs.meshcentral.com/install/abstract/</loc>
+        <loc>https://docs.meshcentral.com/design/</loc>
       </url>
       <url>
-        <loc>https://docs.meshcentral.com/install/quickstart/</loc>
+        <loc>https://docs.meshcentral.com/how-to-contribute/</loc>
       </url>
       <url>
         <loc>https://docs.meshcentral.com/install/abstract/</loc>
@@ -19,7 +19,10 @@
         <loc>https://docs.meshcentral.com/install/container/</loc>
       </url>
       <url>
-        <loc>https://docs.meshcentral.com/install/windows/</loc>
+        <loc>https://docs.meshcentral.com/install/database/local/</loc>
+      </url>
+      <url>
+        <loc>https://docs.meshcentral.com/install/database/mariadb/</loc>
       </url>
       <url>
         <loc>https://docs.meshcentral.com/install/database/mongodb/</loc>
@@ -28,10 +31,7 @@
         <loc>https://docs.meshcentral.com/install/database/postgresql/</loc>
       </url>
       <url>
-        <loc>https://docs.meshcentral.com/install/database/mariadb/</loc>
-      </url>
-      <url>
-        <loc>https://docs.meshcentral.com/install/database/local/</loc>
+        <loc>https://docs.meshcentral.com/install/quickstart/</loc>
       </url>
       <url>
         <loc>https://docs.meshcentral.com/install/security/crowdsec/</loc>
@@ -40,10 +40,22 @@
         <loc>https://docs.meshcentral.com/install/security/secure/</loc>
       </url>
       <url>
-        <loc>https://docs.meshcentral.com/meshcentral/config/</loc>
+        <loc>https://docs.meshcentral.com/install/windows/</loc>
+      </url>
+      <url>
+        <loc>https://docs.meshcentral.com/intelamt/</loc>
+      </url>
+      <url>
+        <loc>https://docs.meshcentral.com/meshcentral/</loc>
       </url>
       <url>
         <loc>https://docs.meshcentral.com/meshcentral/SSLnletsencrypt/</loc>
+      </url>
+      <url>
+        <loc>https://docs.meshcentral.com/meshcentral/agent-downloads/</loc>
+      </url>
+      <url>
+        <loc>https://docs.meshcentral.com/meshcentral/agent-releases/</loc>
       </url>
       <url>
         <loc>https://docs.meshcentral.com/meshcentral/agents/</loc>
@@ -55,10 +67,22 @@
         <loc>https://docs.meshcentral.com/meshcentral/codesigning/</loc>
       </url>
       <url>
+        <loc>https://docs.meshcentral.com/meshcentral/config/</loc>
+      </url>
+      <url>
+        <loc>https://docs.meshcentral.com/meshcentral/customization/</loc>
+      </url>
+      <url>
         <loc>https://docs.meshcentral.com/meshcentral/debugging/</loc>
       </url>
       <url>
         <loc>https://docs.meshcentral.com/meshcentral/devicetabs/</loc>
+      </url>
+      <url>
+        <loc>https://docs.meshcentral.com/meshcentral/faq/</loc>
+      </url>
+      <url>
+        <loc>https://docs.meshcentral.com/meshcentral/openidConnectStrategy/</loc>
       </url>
       <url>
         <loc>https://docs.meshcentral.com/meshcentral/plugins/</loc>
@@ -67,24 +91,30 @@
         <loc>https://docs.meshcentral.com/meshcentral/security/</loc>
       </url>
       <url>
-        <loc>https://docs.meshcentral.com/meshcentral/tokens/</loc>
-      </url>
-      <url>
-        <loc>https://docs.meshcentral.com/meshcentral/faq/</loc>
-      </url>
-      <url>
         <loc>https://docs.meshcentral.com/meshcentral/tipsntricks/</loc>
       </url>
       <url>
-        <loc>https://docs.meshcentral.com/meshcentral/customization/</loc>
+        <loc>https://docs.meshcentral.com/meshcentral/tokens/</loc>
       </url>
       <url>
-        <loc>https://docs.meshcentral.com/meshcentral/openidConnectStrategy/</loc>
+        <loc>https://docs.meshcentral.com/meshcmd/</loc>
+      </url>
+      <url>
+        <loc>https://docs.meshcentral.com/meshctrl/</loc>
+      </url>
+      <url>
+        <loc>https://docs.meshcentral.com/meshrouter/</loc>
+      </url>
+      <url>
+        <loc>https://docs.meshcentral.com/messaging/</loc>
       </url>
       <url>
         <loc>https://docs.meshcentral.com/other/adfs_sso_guide/</loc>
       </url>
       <url>
         <loc>https://docs.meshcentral.com/other/meshcentral_satellite/</loc>
+      </url>
+      <url>
+        <loc>https://docs.meshcentral.com/repositories/</loc>
       </url>
 </urlset>

@@ -15,6 +15,7 @@
         <link rel="canonical" href="https://docs.meshcentral.com/meshcentral/openidConnectStrategy/">
       
       
+      
         <link rel="prev" href="../customization/">
       
       
@@ -25,23 +26,23 @@
       
       
       <link rel="icon" href="../../images/favicon.ico">
-      <meta name="generator" content="zensical-0.0.46">
+      <meta name="generator" content="zensical-0.0.71">
     
     
       
-        <title>Using the OpenID Connect Strategy on MeshCentral - MeshCentral Documentation</title>
+        <title>OpenID Connect Strategy (OIDC) - MeshCentral Documentation</title>
       
     
     
       
         
       
-      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.19d3147f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.e442bf79.min.css">
       
         
           
         
-        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.b60ce83d.min.css">
       
       
 
@@ -83,14 +84,11 @@
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#using-the-openid-connect-strategy-on-meshcentral" class="md-skip">
-          Skip to content
-        </a>
-      
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
     </div>
     <div data-md-component="announce">
       
@@ -120,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Using the OpenID Connect Strategy on MeshCentral
+              OpenID Connect Strategy (OIDC)
             
           </span>
         </div>
@@ -176,7 +174,7 @@
         <a href="https://github.com/Ylianst/MeshCentralDocs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     Ylianst/MeshCentralDocs
@@ -392,7 +390,7 @@
       <a href="https://github.com/Ylianst/MeshCentralDocs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     Ylianst/MeshCentralDocs
@@ -442,18 +440,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Home
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -477,10 +476,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -552,18 +552,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Install
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -587,10 +588,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -614,10 +615,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -656,18 +657,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3_3">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Installation Guides
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -691,10 +693,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -718,10 +720,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -745,10 +747,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -772,18 +774,19 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -822,18 +825,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_4">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3_4">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Databases
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -857,10 +861,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -884,10 +888,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -911,10 +915,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -938,18 +942,19 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -988,18 +993,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_5">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3_5">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Security
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -1023,10 +1029,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1050,18 +1056,20 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -1112,18 +1120,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   MeshCentral
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -1147,10 +1156,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1174,10 +1183,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1201,10 +1210,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1228,10 +1237,64 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent-downloads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Agent Downloads
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent-releases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Agent Release Format
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
   
   
   
@@ -1255,10 +1318,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1282,10 +1345,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1309,10 +1372,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1336,10 +1399,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1363,10 +1426,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1390,10 +1453,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1417,10 +1480,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1444,10 +1507,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1471,10 +1534,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1498,10 +1561,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -1525,10 +1588,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
     
@@ -2360,10 +2423,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -2409,18 +2473,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Submodules and Features
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -2444,10 +2509,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2471,10 +2536,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2498,10 +2563,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2525,10 +2590,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -2626,18 +2692,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_8">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Other
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -2661,10 +2728,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -2688,10 +2755,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -3510,8 +3578,10 @@
             <div class="md-content" data-md-component="content">
               
               <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
                 
                   
+
   
   
 
@@ -3598,21 +3668,21 @@
 <p>Generally, if you are using an IdP that supports OIDC, you can use a very basic configuration to get started, and if needed, add more specific or advanced configurations later. Here is what your config file will look like with a basic, generic, configuration.</p>
 <h3 id="basic-config-file-example"><em>Basic Config File Example</em></h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;settings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;cert&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;mesh.your.domain&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;port&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">443</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;sqlite3&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="nt">"settings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"cert"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mesh.your.domain"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"port"</span><span class="p">:</span><span class="w"> </span><span class="mi">443</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"sqlite3"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;domains&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MeshCentral&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;title2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Your sub-title&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;authStrategies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;oidc&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;issuer&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://sso.your.domain&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;clientid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2d5685c5-0f32-4c1f-9f09-c60e0dbc948a&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;clientsecret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;7PiGSLSLL4e7NGi67KM229tfK7Z7TqzQ&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;newAccounts&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="nt">"domains"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">""</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MeshCentral"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"title2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Your sub-title"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"authStrategies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"oidc"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">"issuer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.your.domain"</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">"clientid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2d5685c5-0f32-4c1f-9f09-c60e0dbc948a"</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">"clientsecret"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7PiGSLSLL4e7NGi67KM229tfK7Z7TqzQ"</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">"newAccounts"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">        </span><span class="p">}</span>
@@ -3630,56 +3700,56 @@
 <p>There are plenty of options at your disposal if you need them. In fact, you can configure any property that node-openid-client supports. The openid-client module supports far more customization than I know what to do with, if you want to know more check out <a href="https://github.com/panva/node-openid-client">node-openid-client on GitHub</a> for expert level configuration details. There are plenty of things you can configure with this strategy and there is a lot of documentation behind the tools used to make this all happen. I strongly recommend you explore the <a href="https://github.com/Ylianst/MeshCentral/blob/master/meshcentral-config-schema.json">config schema</a>, and if you have a complicated config maybe check out the <a href="https://github.com/panva/node-openid-client/blob/main/docs/README.md">openid-client readme</a>. There's a list of resources at the end if you want more information on any specific topics. In the meantime, let’s take a look at an example of what your config file could look with a slightly more complicated configuration, including multiple manually defined endpoints.</p>
 <h4 id="advanced-config-file-example"><em>Advanced Config File Example</em></h4>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;settings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;cert&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;mesh.your.domain&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;port&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">443</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;redirPort&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;AgentPong&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;TLSOffload&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;192.168.1.50&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;SelfUpdate&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;AllowFraming&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;sqlite3&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;WebRTC&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="nt">"settings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"cert"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mesh.your.domain"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"port"</span><span class="p">:</span><span class="w"> </span><span class="mi">443</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"redirPort"</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"AgentPong"</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"TLSOffload"</span><span class="p">:</span><span class="w"> </span><span class="s2">"192.168.1.50"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"SelfUpdate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"AllowFraming"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"sqlite3"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"WebRTC"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;domains&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Mesh&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;title2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;.Your.Domain&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;orphanAgentUser&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;~oidc:e48f8ef3-a9cb-4c84-b6d1-fb7d294e963c&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;authStrategies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;oidc&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;issuer&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;issuer&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://sso.your.domain&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;authorization_endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://auth.your.domain/auth-endpoint&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;token_endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://tokens.sso.your.domain/token-endpoint&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;end_session_endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://sso.your.domain/logout&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;jwks_uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://sso.your.domain/jwks-uri&quot;</span>
+<span class="w">    </span><span class="nt">"domains"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">""</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mesh"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"title2"</span><span class="p">:</span><span class="w"> </span><span class="s2">".Your.Domain"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"orphanAgentUser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~oidc:e48f8ef3-a9cb-4c84-b6d1-fb7d294e963c"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"authStrategies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"oidc"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">"issuer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"issuer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.your.domain"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"authorization_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://auth.your.domain/auth-endpoint"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"token_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://tokens.sso.your.domain/token-endpoint"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"end_session_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.your.domain/logout"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"jwks_uri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.your.domain/jwks-uri"</span>
 <span class="w">                    </span><span class="p">},</span>
-<span class="w">                    </span><span class="nt">&quot;client&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;client_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;110d5612-0822-4449-a057-8a0dbe26eca5&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;client_secret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4TqST46K53o3Z2Q88p39YwR6YwJb7Cka&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;redirect_uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://mesh.your.domain/auth-oidc-callback&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;post_logout_redirect_uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://mesh.your.domain/login&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;token_endpoint_auth_method&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;client_secret_post&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;response_types&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;code&quot;</span>
+<span class="w">                    </span><span class="nt">"client"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"110d5612-0822-4449-a057-8a0dbe26eca5"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"client_secret"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4TqST46K53o3Z2Q88p39YwR6YwJb7Cka"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"redirect_uri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mesh.your.domain/auth-oidc-callback"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"post_logout_redirect_uri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mesh.your.domain/login"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"token_endpoint_auth_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"client_secret_post"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"response_types"</span><span class="p">:</span><span class="w"> </span><span class="s2">"code"</span>
 <span class="w">                    </span><span class="p">},</span>
-<span class="w">                    </span><span class="nt">&quot;custom&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&quot;openid&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;profile&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;read.EmailAlias&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;read.UserProfile&quot;</span><span class="w"> </span><span class="p">],</span>
-<span class="w">                        </span><span class="nt">&quot;preset&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">                    </span><span class="nt">"custom"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"scope"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"openid"</span><span class="p">,</span><span class="w"> </span><span class="s2">"profile"</span><span class="p">,</span><span class="w"> </span><span class="s2">"read.EmailAlias"</span><span class="p">,</span><span class="w"> </span><span class="s2">"read.UserProfile"</span><span class="w"> </span><span class="p">],</span>
+<span class="w">                        </span><span class="nt">"preset"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
 <span class="w">                    </span><span class="p">},</span>
-<span class="w">                    </span><span class="nt">&quot;groups&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;recursive&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Group1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Group2&quot;</span><span class="p">],</span>
-<span class="w">                        </span><span class="nt">&quot;siteadmin&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;GroupA&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;GroupB&quot;</span><span class="p">],</span>
-<span class="w">                        </span><span class="nt">&quot;revokeAdmin&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;sync&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<span class="w">                            </span><span class="nt">&quot;filter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Group1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;GroupB&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;OtherGroup&quot;</span><span class="p">]</span>
+<span class="w">                    </span><span class="nt">"groups"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"recursive"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Group1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Group2"</span><span class="p">],</span>
+<span class="w">                        </span><span class="nt">"siteadmin"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"GroupA"</span><span class="p">,</span><span class="w"> </span><span class="s2">"GroupB"</span><span class="p">],</span>
+<span class="w">                        </span><span class="nt">"revokeAdmin"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"sync"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">                            </span><span class="nt">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Group1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"GroupB"</span><span class="p">,</span><span class="w"> </span><span class="s2">"OtherGroup"</span><span class="p">]</span>
 <span class="w">                        </span><span class="p">},</span>
-<span class="w">                        </span><span class="nt">&quot;claim&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GroupClaim&quot;</span><span class="p">,</span>
-<span class="w">                        </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;read.GroupMemberships&quot;</span>
+<span class="w">                        </span><span class="nt">"claim"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GroupClaim"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"scope"</span><span class="p">:</span><span class="w"> </span><span class="s2">"read.GroupMemberships"</span>
 <span class="w">                    </span><span class="p">},</span>
-<span class="w">                    </span><span class="nt">&quot;logouturl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://sso.your.domain/logout?r=https://mesh.your.domain/login&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;newAccounts&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">                    </span><span class="nt">"logouturl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.your.domain/logout?r=https://mesh.your.domain/login"</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">"newAccounts"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">                </span><span class="p">},</span>
 <span class="w">                </span><span class="p">{</span><span class="err">...</span><span class="p">}</span>
 <span class="w">            </span><span class="p">}</span>
@@ -3715,54 +3785,54 @@
 </tbody>
 </table>
 <h4 id="advanced-config-example"><em>Advanced Config Example</em></h4>
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;issuer&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">   </span><span class="nt">&quot;issuer&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://sso.your.domain&quot;</span><span class="p">,</span>
-<span class="w">   </span><span class="nt">&quot;authorization_endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://auth.your.domain/auth-endpoint&quot;</span><span class="p">,</span>
-<span class="w">   </span><span class="nt">&quot;token_endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://tokens.sso.your.domain/token-endpoint&quot;</span><span class="p">,</span>
-<span class="w">   </span><span class="nt">&quot;end_session_endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://sso.your.domain/logout&quot;</span><span class="p">,</span>
-<span class="w">   </span><span class="nt">&quot;jwks_uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://sso.your.domain/jwks-uri&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">"issuer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="nt">"issuer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.your.domain"</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">"authorization_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://auth.your.domain/auth-endpoint"</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">"token_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://tokens.sso.your.domain/token-endpoint"</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">"end_session_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.your.domain/logout"</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">"jwks_uri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.your.domain/jwks-uri"</span>
 <span class="p">},</span>
 </code></pre></div>
 <h4 id="required-and-commonly-used-configs"><em>Required and Commonly Used Configs</em></h4>
 <p>The <code>issuer</code> property in the <code>issuer</code> object is the only one required, and its only required if you aren't using a preset. Besides the issuer, these are mostly options related to the endpoints and their configuration. The schema below looks intimidating but it comes down to being able to support any IdP. Setting the issuer, and end_session_endpoint are the two main ones you want to setup.</p>
 <h4 id="schema"><em>Schema</em></h4>
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;issuer&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="s2">&quot;object&quot;</span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uri&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Issuer options. Requires issuer URI (issuer.issuer) to discover missing information unless using preset&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;issuer&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uri&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;URI of the issuer.&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;authorization_endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uri&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;token_endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uri&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;jwks_uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uri&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;userinfo_endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uri&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;revocation_endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uri&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;introspection_endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uri&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;end_session_endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uri&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;URI to direct users to when logging out of MeshCentral.&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;this.issuer/logout&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">"issuer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"string"</span><span class="p">,</span><span class="s2">"object"</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uri"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Issuer options. Requires issuer URI (issuer.issuer) to discover missing information unless using preset"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"issuer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uri"</span><span class="p">,</span><span class="w"> </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"URI of the issuer."</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"authorization_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uri"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"token_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uri"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"jwks_uri"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uri"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"userinfo_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uri"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"revocation_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uri"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"introspection_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uri"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"end_session_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uri"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"URI to direct users to when logging out of MeshCentral."</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"this.issuer/logout"</span>
 <span class="w">            </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;registration_endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uri&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;token_endpoint_auth_methods_supported&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;token_endpoint_auth_signing_alg_values_supported&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;introspection_endpoint_auth_methods_supported&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;introspection_endpoint_auth_signing_alg_values_supported&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;revocation_endpoint_auth_methods_supported&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;revocation_endpoint_auth_signing_alg_values_supported&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;request_object_signing_alg_values_supported&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;mtls_endpoint_aliases&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;token_endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uri&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">                </span><span class="nt">&quot;userinfo_endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uri&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">                </span><span class="nt">&quot;revocation_endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uri&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">                </span><span class="nt">&quot;introspection_endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uri&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">        </span><span class="nt">"registration_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uri"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"token_endpoint_auth_methods_supported"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"token_endpoint_auth_signing_alg_values_supported"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"introspection_endpoint_auth_methods_supported"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"introspection_endpoint_auth_signing_alg_values_supported"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"revocation_endpoint_auth_methods_supported"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"revocation_endpoint_auth_signing_alg_values_supported"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"request_object_signing_alg_values_supported"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"mtls_endpoint_aliases"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"object"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"token_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uri"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">                </span><span class="nt">"userinfo_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uri"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">                </span><span class="nt">"revocation_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uri"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">                </span><span class="nt">"introspection_endpoint"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uri"</span><span class="w"> </span><span class="p">}</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">    </span><span class="nt">"additionalProperties"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
 <span class="p">},</span>
 </code></pre></div>
 <h3 id="client-options">"Client" Options</h3>
@@ -3814,78 +3884,78 @@
 </tbody>
 </table>
 <h4 id="advanced-config-example_1"><em>Advanced Config Example</em></h4>
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;client&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;client_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;00b3875c-8d82-4238-a8ef-25303fa7f9f2&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;client_secret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;7PP453H577xbFDCqG8nYEJg8M3u8GT8F&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;redirect_uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://mesh.your.domain/auth-oidc-callback&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;post_logout_redirect_uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://mesh.your.domain/login&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;token_endpoint_auth_method&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;client_secret_post&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;response_types&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;code&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">"client"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00b3875c-8d82-4238-a8ef-25303fa7f9f2"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"client_secret"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7PP453H577xbFDCqG8nYEJg8M3u8GT8F"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"redirect_uri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mesh.your.domain/auth-oidc-callback"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"post_logout_redirect_uri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mesh.your.domain/login"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"token_endpoint_auth_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"client_secret_post"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"response_types"</span><span class="p">:</span><span class="w"> </span><span class="s2">"code"</span>
 <span class="p">},</span>
 </code></pre></div>
 <h4 id="required-and-commonly-used-configs_1"><em>Required and Commonly Used Configs</em></h4>
 <p>There are many available options you can configure but most of them go unused. Although there are a few <em>commonly used</em> properties. The first two properties, <code>client_id</code> and <code>client_secret</code> are required. The next one <code>redirect_uri</code> is used to setup a custom URI for the redirect back to MeshCentral after being authenticated by your IdP.  The <code>post_logout_redirect_uri</code> property is used to tell your IdP where to send you after being logged out. These work in conjunction with the issuers <code>end_session_url</code> to automatically fill in any blanks in the config.</p>
 <h4 id="schema_1"><em>Schema</em></h4>
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;client&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OIDC Client Options&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;client_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;REQUIRED: The client ID provided by your Identity Provider (IdP)&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">"client"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OIDC Client Options"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"REQUIRED: The client ID provided by your Identity Provider (IdP)"</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;client_secret&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;REQUIRED: The client secret provided by your Identity Provider (IdP)&quot;</span>
+<span class="w">        </span><span class="nt">"client_secret"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"REQUIRED: The client secret provided by your Identity Provider (IdP)"</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;redirect_uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uri&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;URI your IdP sends you after successful authorization. This must match what is listed with your IdP. (Default is https://[currentHost][currentPath]/auth-oidc-callback)&quot;</span>
+<span class="w">        </span><span class="nt">"redirect_uri"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uri"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"URI your IdP sends you after successful authorization. This must match what is listed with your IdP. (Default is https://[currentHost][currentPath]/auth-oidc-callback)"</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;post_logout_redirect_uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">                </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="s2">&quot;boolean&quot;</span>
+<span class="w">        </span><span class="nt">"post_logout_redirect_uri"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">"string"</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">"boolean"</span>
 <span class="w">            </span><span class="p">],</span>
-<span class="w">            </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uri&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="nt">&quot;URI for your IdP to send you after logging out of IdP via MeshCentral OR set to false to not send a post logout redirect_uri&quot;</span>
-<span class="w">            </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https:[currentHost][currentPath]/login&quot;</span>
+<span class="w">            </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uri"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="nt">"URI for your IdP to send you after logging out of IdP via MeshCentral OR set to false to not send a post logout redirect_uri"</span>
+<span class="w">            </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https:[currentHost][currentPath]/login"</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;id_token_signed_response_alg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;RS256&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;id_token_encrypted_response_alg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;id_token_encrypted_response_enc&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;userinfo_signed_response_alg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;userinfo_encrypted_response_alg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;userinfo_encrypted_response_enc&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;response_types&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">],</span><span class="w"> </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;code&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;default_max_age&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;require_auth_time&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;boolean&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">},</span><span class="w"> </span>
-<span class="w">        </span><span class="nt">&quot;request_object_signing_alg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;request_object_encryption_alg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;request_object_encryption_enc&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;token_endpoint_auth_method&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;client_secret_basic&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&quot;none&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;client_secret_basic&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;client_secret_post&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;client_secret_jwt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;private_key_jwt&quot;</span><span class="w"> </span><span class="p">]</span>
+<span class="w">        </span><span class="nt">"id_token_signed_response_alg"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RS256"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"id_token_encrypted_response_alg"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"id_token_encrypted_response_enc"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"userinfo_signed_response_alg"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"userinfo_encrypted_response_alg"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"userinfo_encrypted_response_enc"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"response_types"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="s2">"array"</span><span class="p">],</span><span class="w"> </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"code"</span><span class="p">]</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"default_max_age"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"number"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"require_auth_time"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="p">,</span><span class="w"> </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">},</span><span class="w"> </span>
+<span class="w">        </span><span class="nt">"request_object_signing_alg"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"request_object_encryption_alg"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"request_object_encryption_enc"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"token_endpoint_auth_method"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"client_secret_basic"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"enum"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"none"</span><span class="p">,</span><span class="w"> </span><span class="s2">"client_secret_basic"</span><span class="p">,</span><span class="w"> </span><span class="s2">"client_secret_post"</span><span class="p">,</span><span class="w"> </span><span class="s2">"client_secret_jwt"</span><span class="p">,</span><span class="w"> </span><span class="s2">"private_key_jwt"</span><span class="w"> </span><span class="p">]</span>
 <span class="w">        </span><span class="p">},</span><span class="w"> </span>
-<span class="w">        </span><span class="nt">&quot;introspection_endpoint_auth_method&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;client_secret_basic&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&quot;none&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;client_secret_basic&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;client_secret_post&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;client_secret_jwt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;private_key_jwt&quot;</span><span class="w"> </span><span class="p">]</span>
+<span class="w">        </span><span class="nt">"introspection_endpoint_auth_method"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"client_secret_basic"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"enum"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"none"</span><span class="p">,</span><span class="w"> </span><span class="s2">"client_secret_basic"</span><span class="p">,</span><span class="w"> </span><span class="s2">"client_secret_post"</span><span class="p">,</span><span class="w"> </span><span class="s2">"client_secret_jwt"</span><span class="p">,</span><span class="w"> </span><span class="s2">"private_key_jwt"</span><span class="w"> </span><span class="p">]</span>
 <span class="w">        </span><span class="p">},</span><span class="w"> </span>
-<span class="w">        </span><span class="nt">&quot;revocation_endpoint_auth_method&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;client_secret_basic&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&quot;none&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;client_secret_basic&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;client_secret_post&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;client_secret_jwt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;private_key_jwt&quot;</span><span class="w"> </span><span class="p">]</span>
+<span class="w">        </span><span class="nt">"revocation_endpoint_auth_method"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"client_secret_basic"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"enum"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"none"</span><span class="p">,</span><span class="w"> </span><span class="s2">"client_secret_basic"</span><span class="p">,</span><span class="w"> </span><span class="s2">"client_secret_post"</span><span class="p">,</span><span class="w"> </span><span class="s2">"client_secret_jwt"</span><span class="p">,</span><span class="w"> </span><span class="s2">"private_key_jwt"</span><span class="w"> </span><span class="p">]</span>
 <span class="w">        </span><span class="p">},</span><span class="w"> </span>
-<span class="w">        </span><span class="nt">&quot;token_endpoint_auth_signing_alg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;introspection_endpoint_auth_signing_alg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;revocation_endpoint_auth_signing_alg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;tls_client_certificate_bound_access_tokens&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;boolean&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">        </span><span class="nt">"token_endpoint_auth_signing_alg"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"introspection_endpoint_auth_signing_alg"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"revocation_endpoint_auth_signing_alg"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"tls_client_certificate_bound_access_tokens"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="w"> </span><span class="p">}</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&quot;client_id&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;client_secret&quot;</span><span class="w"> </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">    </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"client_id"</span><span class="p">,</span><span class="w"> </span><span class="s2">"client_secret"</span><span class="w"> </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">"additionalProperties"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
 <span class="p">},</span>
 </code></pre></div>
 <h3 id="custom-options">"Custom" Options</h3>
@@ -3930,14 +4000,14 @@
 </tbody>
 </table>
 <h4 id="advanced-config-example_2"><em>Advanced Config Example</em></h4>
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;custom&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&quot;openid&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;profile&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;read.EmailAlias&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;read.UserProfile&quot;</span><span class="w"> </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;preset&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;claims&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;nameOfUser&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;publicEmail&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">"custom"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"scope"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"openid"</span><span class="p">,</span><span class="w"> </span><span class="s2">"profile"</span><span class="p">,</span><span class="w"> </span><span class="s2">"read.EmailAlias"</span><span class="p">,</span><span class="w"> </span><span class="s2">"read.UserProfile"</span><span class="w"> </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">"preset"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"claims"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nameOfUser"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"publicEmail"</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;buttonText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Login to Custom SSO Brand&quot;</span>
+<span class="w">    </span><span class="nt">"buttonText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Login to Custom SSO Brand"</span>
 <span class="p">},</span>
 </code></pre></div>
 <blockquote>
@@ -3946,29 +4016,29 @@
 <h4 id="required-and-commonly-used-configs_2"><em>Required and Commonly Used Configs</em></h4>
 <p>As should be apparent from the name, the <code>custom</code> property is optional and intended for advanced configurations. With that said, let's look at a few common options. By default, the strategy uses the <code>openid</code>, <code>profile</code>, and <code>email</code> scopes to gather the required user information. If your IdP does not support or require all of those scopes, you can define the scope manually. Combine that with the ability to set the group scope and you can end up with an entirely custom scope being sent to your IdP. Not to mention the claims property, which allows you to pick and choose what claims to use to gather your data in case you have issues with any of the default behaviors of OpenID Connect and your IdP. This is also where you would set the preset and any values required by the presets.</p>
 <h4 id="schema_2"><em>Schema</em></h4>
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;custom&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">],</span>
-<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A list of scopes to request from the issuer.&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;openid profile email&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;examples&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;openid&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;openid&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;profile&quot;</span><span class="p">],</span><span class="w"> </span><span class="s2">&quot;openid profile email&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;openid profile email groups&quot;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="nt">"custom"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"scope"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="s2">"array"</span><span class="p">],</span>
+<span class="w">            </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A list of scopes to request from the issuer."</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"openid profile email"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"examples"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"openid"</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">"openid"</span><span class="p">,</span><span class="w"> </span><span class="s2">"profile"</span><span class="p">],</span><span class="w"> </span><span class="s2">"openid profile email"</span><span class="p">,</span><span class="w"> </span><span class="s2">"openid profile email groups"</span><span class="p">]</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;claims&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">                </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">                </span><span class="nt">&quot;uuid&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">        </span><span class="nt">"claims"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">                </span><span class="nt">"uuid"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w"> </span><span class="p">}</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;preset&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;azure&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;google&quot;</span><span class="p">]},</span>
-<span class="w">        </span><span class="nt">&quot;tenant_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;REQUIRED FOR AZURE PRESET: Tenantid for Azure&quot;</span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;customer_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;REQUIRED FOR GOOGLE PRESET IF USING GROUPS: Customer ID from Google, should start with &#39;C&#39;.&quot;</span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;buttonText&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Custom text for the OIDC login button. Default: &#39;Sign-in using OpenID Connect&#39;.&quot;</span><span class="p">}</span>
+<span class="w">        </span><span class="nt">"preset"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="nt">"enum"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"azure"</span><span class="p">,</span><span class="w"> </span><span class="s2">"google"</span><span class="p">]},</span>
+<span class="w">        </span><span class="nt">"tenant_id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"REQUIRED FOR AZURE PRESET: Tenantid for Azure"</span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"customer_id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"REQUIRED FOR GOOGLE PRESET IF USING GROUPS: Customer ID from Google, should start with 'C'."</span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"buttonText"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Custom text for the OIDC login button. Default: 'Sign-in using OpenID Connect'."</span><span class="p">}</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">    </span><span class="nt">"additionalProperties"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
 <span class="p">},</span>
 </code></pre></div>
 <h4 id="custom-login-button"><em>Custom Login Button</em></h4>
@@ -3996,10 +4066,10 @@
 </tbody>
 </table>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;authStrategies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;oidc&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;custom&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;buttonText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Login to Custom SSO Brand&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">"authStrategies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"oidc"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"custom"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"buttonText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Login to Custom SSO Brand"</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
@@ -4007,12 +4077,12 @@
 <p>These properties only affect the login page UI (button tooltip) and are safe to set for branding or clarity. If using a custom button text, it will not be translated when changing languages.</p>
 <h4 id="custom-icon"><em>Custom Icon</em></h4>
 <p>The OIDC login button icon can be customized by setting a remote image URL in the domain config under <code>authStrategies.oidc.custom</code>. MeshCentral will validate the image at startup and use it for the login button. Example:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;authStrategies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;oidc&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;custom&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;buttonIconUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://cdn.example.com/icons/oidc32.png&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;buttonIconUrl2x&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://cdn.example.com/icons/oidc64.png&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;buttonText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Login to Custom SSO Brand&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">"authStrategies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"oidc"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"custom"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"buttonIconUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://cdn.example.com/icons/oidc32.png"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"buttonIconUrl2x"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://cdn.example.com/icons/oidc64.png"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"buttonText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Login to Custom SSO Brand"</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
@@ -4100,57 +4170,57 @@
 </tbody>
 </table>
 <h4 id="advanced-config-example_3"><em>Advanced Config Example</em></h4>
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;groups&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;recursive&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Group1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Group2&quot;</span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;siteadmin&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;GroupA&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;GroupB&quot;</span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;revokeAdmin&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;sync&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<span class="w">        </span><span class="nt">&quot;filter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Group1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;GroupB&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;OtherGroup&quot;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="nt">"groups"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"recursive"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Group1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Group2"</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">"siteadmin"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"GroupA"</span><span class="p">,</span><span class="w"> </span><span class="s2">"GroupB"</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">"revokeAdmin"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"sync"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">        </span><span class="nt">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Group1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"GroupB"</span><span class="p">,</span><span class="w"> </span><span class="s2">"OtherGroup"</span><span class="p">]</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;claim&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GroupClaim&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;read.GroupMemberships&quot;</span>
+<span class="w">    </span><span class="nt">"claim"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GroupClaim"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"scope"</span><span class="p">:</span><span class="w"> </span><span class="s2">"read.GroupMemberships"</span>
 <span class="p">},</span>
 </code></pre></div>
 <h4 id="required-and-commonly-used-configs_3"><em>Required and Commonly Used Configs</em></h4>
 <p>As you can see in the schema below, there aren't any required properties in the groups object, however there are some commonly used ones. The first, and maybe most commonly used one, is the sync property. The sync property mirrors IdP provided groups into MeshCentral as user groups. You can then configure access as required to those groups, and as users log in, they will be added to the now existing groups if they are a member. You also have other options like using a custom <em>scope</em> or <em>claim</em> to get your IdP communicating with MeshCentral properly, without the use of preset configs. You also can set the required property if you need to limit authorization to users that are a member of at least one of the groups you set.  or the siteadmin property to grant admin privilege, with the revokeAdmin property available to allow revoking admin rights also.</p>
 <h4 id="schema_3"><em>Schema</em></h4>
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;groups&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;recursive&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;boolean&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;When true, the group memberships will be scanned recursively.&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">"groups"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"recursive"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"When true, the group memberships will be scanned recursively."</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="w"> </span><span class="p">],</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Access is only granted to users who are a member of at least one of the listed required groups.&quot;</span>
+<span class="w">    </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="s2">"array"</span><span class="w"> </span><span class="p">],</span>
+<span class="w">      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Access is only granted to users who are a member of at least one of the listed required groups."</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;siteadmin&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="w"> </span><span class="p">],</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Full site admin priviledges will be granted to users who are a member of at least one of the listed admin groups.&quot;</span>
+<span class="w">    </span><span class="nt">"siteadmin"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="s2">"array"</span><span class="w"> </span><span class="p">],</span>
+<span class="w">      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Full site admin priviledges will be granted to users who are a member of at least one of the listed admin groups."</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;revokeAdmin&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;boolean&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;If true, admin privileges will be revoked from users who are NOT a member of at least one of the listed admin groups.&quot;</span>
+<span class="w">    </span><span class="nt">"revokeAdmin"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"If true, admin privileges will be revoked from users who are NOT a member of at least one of the listed admin groups."</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;sync&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&quot;boolean&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="w"> </span><span class="p">],</span>
-<span class="w">      </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;If true, all groups found during user login are mirrored into MeshCentral user groups.&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;filter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="w"> </span><span class="p">],</span>
-<span class="w">          </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Only groups listed here are mirrored into MeshCentral user groups.&quot;</span>
+<span class="w">    </span><span class="nt">"sync"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"boolean"</span><span class="p">,</span><span class="w"> </span><span class="s2">"object"</span><span class="w"> </span><span class="p">],</span>
+<span class="w">      </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"If true, all groups found during user login are mirrored into MeshCentral user groups."</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="s2">"array"</span><span class="w"> </span><span class="p">],</span>
+<span class="w">          </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Only groups listed here are mirrored into MeshCentral user groups."</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">      </span><span class="p">}</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;groups&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Custom scope to use.&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;claim&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;groups&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Custom claim to use.&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="nt">"scope"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"groups"</span><span class="p">,</span><span class="w"> </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Custom scope to use."</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"claim"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"groups"</span><span class="p">,</span><span class="w"> </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Custom claim to use."</span><span class="w"> </span><span class="p">}</span>
 <span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">  </span><span class="nt">"additionalProperties"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="preset-openid-connect-configurations">Preset OpenID Connect Configurations</h2>
@@ -4195,44 +4265,44 @@
 <p>Check out this <a href="https://developers.google.com/identity/protocols/oauth2/openid-connect">documentation</a> to get ready before we start.</p>
 </blockquote>
 <h4 id="basic-config-example"><em>Basic Config Example</em></h4>
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;oidc&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;client&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;client_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;268438852161-r8xa7qxwf3rr0shp1xnpgmm70bnag21p.apps.googleusercontent.com&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;client_secret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ETFWBX-gFEaxfPXs1tWmAOkuWDFTgoL3nwh&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">"oidc"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"client"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"268438852161-r8xa7qxwf3rr0shp1xnpgmm70bnag21p.apps.googleusercontent.com"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"client_secret"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ETFWBX-gFEaxfPXs1tWmAOkuWDFTgoL3nwh"</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <h4 id="specifics"><em>Specifics</em></h4>
 <p>If you notice above I forgot to add any preset related configs, however because google tags the client ID we can detect that and automatically use the google preset. The above config is tested, the sentive data has been scrambled of course. That said, you would normally use this preset in more advaced setups, let take a look at an example.</p>
 <h4 id="advanced-example-with-groups"><em>Advanced Example with Groups</em></h4>
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;oidc&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;client&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;client_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;424555768625-k7ub3ovqs0yp7mfo0usvyyx51nfii61c.apps.googleusercontent.com&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;client_secret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;QLBCQY-nRYmjnFWv3nKyHGmwQEGLokP6ldk&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">"oidc"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"client"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"424555768625-k7ub3ovqs0yp7mfo0usvyyx51nfii61c.apps.googleusercontent.com"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"client_secret"</span><span class="p">:</span><span class="w"> </span><span class="s2">"QLBCQY-nRYmjnFWv3nKyHGmwQEGLokP6ldk"</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;custom&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;preset&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;google&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;customer_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C46kyhmps&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;buttonText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Custom Button Text&quot;</span>
+<span class="w">    </span><span class="nt">"custom"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"preset"</span><span class="p">:</span><span class="w"> </span><span class="s2">"google"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"customer_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C46kyhmps"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"buttonText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Custom Button Text"</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;groups&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;siteadmin&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;GroupA&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;GroupB&quot;</span><span class="p">],</span>
-<span class="w">        </span><span class="nt">&quot;revokeAdmin&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;sync&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="nt">"groups"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"siteadmin"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"GroupA"</span><span class="p">,</span><span class="w"> </span><span class="s2">"GroupB"</span><span class="p">],</span>
+<span class="w">        </span><span class="nt">"revokeAdmin"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"sync"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;callbackURL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://mesh.your.domain/auth-oidc-google-callback&quot;</span>
+<span class="w">    </span><span class="nt">"callbackURL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mesh.your.domain/auth-oidc-google-callback"</span>
 <span class="p">},</span>
 </code></pre></div>
 <h4 id="customer-id-and-groups"><em>Customer ID and Groups</em></h4>
 <p>As always, the client ID and secret are required, the customer ID on the other hand is only required if you plan to take advantage of the groups function <em>and</em> the google preset. This also requires you have a customer ID, if you have do, it is available in the Google Workspace Admin Console under Profile-&gt;View. Groups work the same as they would with any other IdP but they are pulled from the Workspace groups. </p>
 <h4 id="schema_4"><em>Schema</em></h4>
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;custom&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;preset&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;azure&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;google&quot;</span><span class="p">]},</span>
-<span class="w">        </span><span class="nt">&quot;customer_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Customer ID from Google, should start with &#39;C&#39;.&quot;</span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="nt">"custom"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"preset"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="nt">"enum"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"azure"</span><span class="p">,</span><span class="w"> </span><span class="s2">"google"</span><span class="p">]},</span>
+<span class="w">        </span><span class="nt">"customer_id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Customer ID from Google, should start with 'C'."</span><span class="p">}</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">    </span><span class="nt">"additionalProperties"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
 <span class="p">},</span>
 </code></pre></div>
 <h3 id="azure-preset">Azure Preset</h3>
@@ -4242,14 +4312,14 @@
 <p>Check this <a href="https://learn.microsoft.com/en-us/azure/active-directory/manage-apps/add-application-portal-setup-oidc-sso">documentation</a> for more information.  </p>
 </blockquote>
 <h4 id="basic-config-example_1"><em>Basic Config Example</em></h4>
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;oidc&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;client&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;client_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a1gkl04i-40g8-2h74-6v41-2jm2o2x0x27r&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;client_secret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AxT6U5K4QtcyS6gF48gndL7Ys22BL15BWJImuq1O&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">"oidc"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"client"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a1gkl04i-40g8-2h74-6v41-2jm2o2x0x27r"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"client_secret"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AxT6U5K4QtcyS6gF48gndL7Ys22BL15BWJImuq1O"</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;custom&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;preset&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;azure&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;tenant_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;46a6022g-4h33-1451-h1rc-08102ga3b5e4&quot;</span>
+<span class="w">    </span><span class="nt">"custom"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"preset"</span><span class="p">:</span><span class="w"> </span><span class="s2">"azure"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"tenant_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"46a6022g-4h33-1451-h1rc-08102ga3b5e4"</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -4259,32 +4329,32 @@
 <p>NOTE: The Azure AD preset uses the Tenant ID as part of the issuer URI:<br><code>"https://login.microsoftonline.com/"</code> + <code>strategy</code>.custom.tenant_id + <code>"/v2.0"</code></p>
 </blockquote>
 <h4 id="advanced-example-with-groups_1"><em>Advanced Example with Groups</em></h4>
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;oidc&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;client&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;client_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a1gkl04i-40g8-2h74-6v41-2jm2o2x0x27r&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;client_secret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AxT6U5K4QtcyS6gF48gndL7Ys22BL15BWJImuq1O&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">"oidc"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"client"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a1gkl04i-40g8-2h74-6v41-2jm2o2x0x27r"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"client_secret"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AxT6U5K4QtcyS6gF48gndL7Ys22BL15BWJImuq1O"</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;custom&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;preset&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;azure&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;tenant_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;46a6022g-4h33-1451-h1rc-08102ga3b5e4&quot;</span>
+<span class="w">    </span><span class="nt">"custom"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"preset"</span><span class="p">:</span><span class="w"> </span><span class="s2">"azure"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"tenant_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"46a6022g-4h33-1451-h1rc-08102ga3b5e4"</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;groups&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;recursive&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;siteadmin&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;GroupA&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;GroupB&quot;</span><span class="p">],</span>
-<span class="w">        </span><span class="nt">&quot;revokeAdmin&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;sync&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="nt">"groups"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"recursive"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"siteadmin"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"GroupA"</span><span class="p">,</span><span class="w"> </span><span class="s2">"GroupB"</span><span class="p">],</span>
+<span class="w">        </span><span class="nt">"revokeAdmin"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"sync"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;callbackURL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://mesh.your.domain/auth-oidc-azure-callback&quot;</span>
+<span class="w">    </span><span class="nt">"callbackURL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mesh.your.domain/auth-oidc-azure-callback"</span>
 <span class="p">},</span>
 </code></pre></div>
 <h4 id="schema_5"><em>Schema</em></h4>
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;custom&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;preset&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;azure&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;google&quot;</span><span class="p">]},</span>
-<span class="w">        </span><span class="nt">&quot;tenant_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tenant ID from Azure AD.&quot;</span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="nt">"custom"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"preset"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="nt">"enum"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"azure"</span><span class="p">,</span><span class="w"> </span><span class="s2">"google"</span><span class="p">]},</span>
+<span class="w">        </span><span class="nt">"tenant_id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w"> </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tenant ID from Azure AD."</span><span class="p">}</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">    </span><span class="nt">"additionalProperties"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
 <span class="p">},</span>
 </code></pre></div>
 <h2 id="deprecated-properties">Deprecated Properties</h2>
@@ -4294,32 +4364,32 @@
 <h4 id="migrating-old-configs"><em>Migrating Old Configs</em></h4>
 <p>We upgraded but what about all the existing users, we couldn't just invalidate every config pre <code>v1.1.22</code>. So in an effort to allow greater flexibility to all users of MeshCentral, and what futures scholars will all agree was an obvious move, all the deprecated configs will continue working as expected. Using any of the old options will just generate a warning in the authlog and will not stop you from using this the OIDC strategy with outdated configs, however if both the equivalent new and old config are set the new config will be used.</p>
 <h4 id="old-config-example"><em>Old Config Example</em></h4>
-<p><div class="highlight"><pre><span></span><code><span class="nt">&quot;oidc&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;newAccounts&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;clientid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;421326444155-i1tt4bsmk3jm7dri6jldekl86rfpg07r.apps.googleusercontent.com&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;clientsecret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GNLXOL-kEDjufOCk6pIcTHtaHFOCgbT4hoi&quot;</span>
+<p><div class="highlight"><pre><span></span><code><span class="nt">"oidc"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"newAccounts"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"clientid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"421326444155-i1tt4bsmk3jm7dri6jldekl86rfpg07r.apps.googleusercontent.com"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"clientsecret"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GNLXOL-kEDjufOCk6pIcTHtaHFOCgbT4hoi"</span>
 <span class="p">}</span>
 </code></pre></div>
 This example was chosen to highlight one advantage of supporting these older configs while they remain deprecated: you can copy an existing configuration from a related strategy and test the OIDC strategy without restructuring your config first. In this example, the original configuration was a Google auth strategy, and the only change made was replacing <code>"google"</code> with <code>"oidc"</code>, aside from obfuscation.</p>
 <h4 id="advcanced-old-config-example"><em>Advcanced Old Config Example</em></h4>
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;oidc&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;authorizationURL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://sso.your.domain/api/oidc/authorization&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;callbackURL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://mesh.your.domain/oauth2/oidc/callback&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;clientid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tZiPTMDNuSaQPapAQJtwDXVnYjjhQybc&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;clientsecret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vrQWspJxdVAxEFJdrxvxeQwWkooVcqdU&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;issuer&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://sso.your.domain&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;tokenURL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://sso.your.domain/api/oidc/token&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;userInfoURL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://sso.your.domain/api/oidc/userinfo&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;logoutURL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://sso.your.domain/logout?rd=https://mesh.your.domain/login&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;groups&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;recursive&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Group1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Group2&quot;</span><span class="p">],</span>
-<span class="w">        </span><span class="nt">&quot;siteadmin&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;GroupA&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;GroupB&quot;</span><span class="p">],</span>
-<span class="w">        </span><span class="nt">&quot;sync&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<span class="w">            </span><span class="nt">&quot;filter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Group1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;GroupB&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;OtherGroup&quot;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="nt">"oidc"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"authorizationURL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.your.domain/api/oidc/authorization"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"callbackURL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mesh.your.domain/oauth2/oidc/callback"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"clientid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tZiPTMDNuSaQPapAQJtwDXVnYjjhQybc"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"clientsecret"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vrQWspJxdVAxEFJdrxvxeQwWkooVcqdU"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"issuer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.your.domain"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"tokenURL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.your.domain/api/oidc/token"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"userInfoURL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.your.domain/api/oidc/userinfo"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"logoutURL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.your.domain/logout?rd=https://mesh.your.domain/login"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"groups"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"recursive"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Group1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Group2"</span><span class="p">],</span>
+<span class="w">        </span><span class="nt">"siteadmin"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"GroupA"</span><span class="p">,</span><span class="w"> </span><span class="s2">"GroupB"</span><span class="p">],</span>
+<span class="w">        </span><span class="nt">"sync"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">            </span><span class="nt">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Group1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"GroupB"</span><span class="p">,</span><span class="w"> </span><span class="s2">"OtherGroup"</span><span class="p">]</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;newAccounts&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="nt">"newAccounts"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="p">},</span>
 </code></pre></div>
 <h4 id="upgrading-to-v1122"><em>Upgrading to v1.1.22</em></h4>
@@ -4377,7 +4447,7 @@ This example was chosen to highlight one advantage of supporting these older con
 </footer>
       
     </div>
-    <div class="md-dialog" data-md-component="dialog">
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
@@ -4385,10 +4455,14 @@ This example was chosen to highlight one advantage of supporting these older con
     
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.code.copy","content.code.select","navigation.tabs","navigation.top","navigation.sections","navigation.instant","search.suggest"],"search":"../../assets/javascripts/workers/search.b6b7e04f.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.code.copy","content.code.select","navigation.tabs","navigation.top","navigation.sections","navigation.instant","search.suggest"],"redirect":null,"search":"../../assets/javascripts/workers/search.c47bb847.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ee611ef6.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a2388154.min.js"></script>
       
     
   </body>
